@@ -12,6 +12,7 @@
   font-weight: normal;
   font-style: normal; }
 
+
 @font-face {
   font-family: 'ars_maquette_promedium';
   src: url("http://localhost/theHut/fonts/arsmaquettepro-medium-webfont.eot");
@@ -8224,4 +8225,6 @@ section.catalogue .content {
   display: none; }
 
 .block {
-  display: block; }
+  display: block; 
+}
+
