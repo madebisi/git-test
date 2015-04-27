@@ -1,0 +1,162 @@
+[
+  {
+    "description": "tested for future Promotions 0",
+    "expiryDate": "2013-12-12T23:59:00",
+    "headline": "test78 Promotions",
+    "highlightImage": {
+      "category": "Highlight",
+      "external": false,
+      "href": "qqeqeqeqeqeqeq",
+      "id": 13,
+      "name": "test Image",
+      "order": -1,
+      "overlayCopy": "",
+      "path": "http://localhost/~stephenanderson/prototypes/WebSitePrototype/img/v2/block2x-wide-promotion.jpg"
+    },
+    "id": 78,
+    "logoImage": {
+      "category": "Logo",
+      "external": false,
+      "href": "www.test.com",
+      "id": 15,
+      "name": "test logo image",
+      "order": -1,
+      "overlayCopy": "",
+      "path": "http://localhost/~stephenanderson/prototypes/WebSitePrototype/img/v2/logo-mail-plus-small.png"
+    },
+    "pointsCost": 0,
+    "qualifierCopy": "test78qualifier",
+    "standardImage": {
+      "category": "Standard",
+      "external": false,
+      "href": "",
+      "id": 20,
+      "name": "Bambi Standard 1",
+      "order": -1,
+      "overlayCopy": "",
+      "path": "http://localhost/~stephenanderson/prototypes/WebSitePrototype/img/v2/Bambi_dvd.gif"
+    },
+    "subtitle": "test78Subtitle",
+    "title": "testF1"
+  },
+  {
+    "description": "tested for future Promotions 1",
+    "expiryDate": "2013-12-12T23:59:00",
+    "headline": "test78 Promotions",
+    "highlightImage": {
+      "category": "Highlight",
+      "external": false,
+      "href": "qqeqeqeqeqeqeq",
+      "id": 13,
+      "name": "test Image",
+      "order": -1,
+      "overlayCopy": "",
+      "path": "http://localhost/~stephenanderson/prototypes/WebSitePrototype/img/v2/logo image_v_1.png"
+    },
+    "id": 78,
+    "logoImage": {
+      "category": "Logo",
+      "external": false,
+      "href": "www.test.com",
+      "id": 15,
+      "name": "test logo image",
+      "order": -1,
+      "overlayCopy": "",
+      "path": "http://localhost/~stephenanderson/prototypes/WebSitePrototype/img/v2/logo-mail-rewards-small.jpg"
+    },
+    "pointsCost": 0,
+    "qualifierCopy": "test78qualifier",
+    "standardImage": {
+      "category": "Standard",
+      "external": false,
+      "href": "",
+      "id": 20,
+      "name": "Bambi Standard 1",
+      "order": -1,
+      "overlayCopy": "",
+      "path": "http://localhost/~stephenanderson/prototypes/WebSitePrototype/img/v2/block1x-large-promotion.jpg"
+    },
+    "subtitle": "test78Subtitle",
+    "title": "testF1"
+  },
+  {
+    "description": "test for freq promotion 2",
+    "expiryDate": "2013-12-12T23:59:00",
+    "headline": "test80 Promotions",
+    "highlightImage": {
+      "category": "Highlight",
+      "external": false,
+      "href": "qqeqeqeqeqeqeq",
+      "id": 13,
+      "name": "test Image",
+      "order": -1,
+      "overlayCopy": "",
+      "path": "http://localhost/~stephenanderson/prototypes/WebSitePrototype/img/v2/logo image_v_1.png"
+    },
+    "id": 80,
+    "logoImage": {
+      "category": "Logo",
+      "external": false,
+      "href": "www.test.com",
+      "id": 15,
+      "name": "test logo image",
+      "order": -1,
+      "overlayCopy": "",
+      "path": "http://localhost/~stephenanderson/prototypes/WebSitePrototype/img/v2/logo-the-mail-small.jpg"
+    },
+    "pointsCost": 0,
+    "qualifierCopy": "test80qualifier",
+    "standardImage": {
+      "category": "Standard",
+      "external": false,
+      "href": "",
+      "id": 20,
+      "name": "Bambi Standard 1",
+      "order": -1,
+      "overlayCopy": "",
+      "path": "http://localhost/~stephenanderson/prototypes/WebSitePrototype/img/v2/block2x-large-promotion.jpg"
+    },
+    "subtitle": "test80Subtitle",
+    "title": "testF3"
+  },
+  {
+    "description": "test for future promotion 3",
+    "expiryDate": "2013-12-13T23:59:00",
+    "headline": "test81 Promotions",
+    "highlightImage": {
+      "category": "Highlight",
+      "external": false,
+      "href": "qqeqeqeqeqeqeq",
+      "id": 13,
+      "name": "test Image",
+      "order": -1,
+      "overlayCopy": "",
+      "path": "http://localhost/~stephenanderson/prototypes/WebSitePrototypeimg/v2/logo image_v_1.png"
+    },
+    "id": 81,
+    "logoImage": {
+      "category": "Logo",
+      "external": false,
+      "href": "www.test.com",
+      "id": 15,
+      "name": "test logo image",
+      "order": -1,
+      "overlayCopy": "",
+      "path": "http://localhost/~stephenanderson/prototypes/WebSitePrototype/img/v2/logo-wh-smith-small.jpg"
+    },
+    "pointsCost": 0,
+    "qualifierCopy": "test81qualifier",
+    "standardImage": {
+      "category": "Standard",
+      "external": false,
+      "href": "",
+      "id": 20,
+      "name": "Bambi Standard 1",
+      "order": -1,
+      "overlayCopy": "",
+      "path": "http://localhost/~stephenanderson/prototypes/WebSitePrototype/img/v2/block3x-large-promotion.jpg"
+    },
+    "subtitle": "test81Subtitle",
+    "title": "testF4"
+  }
+]

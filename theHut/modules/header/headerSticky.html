@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Sticky Header</title>
+
+	<link rel="stylesheet" href="../../stylesheets/app.css">
+	<script src="../../javascripts/vendor/custom.modernizr.js"></script>
+
+</head>
+<body role="document">
+	<div class="wrapper">
+		<header class="header mm_loggedIn" data-magellan-expedition=""  role="banner">
+
+			<div class="row">
+
+				<div class="large-3 columns">
+					<section class="logo">
+						<h1><a href="#" class="site-logo"><img alt="DMG logo" src="../../images/logo.png" /></a></h1>
+					</section><!--// Logo -->
+				</div>
+
+				<div class="large-9 columns">
+					<div class="mm_topLogIn">
+						<ul class="inline-list" role="menu">
+							<li><a href="#" role="menuitem">Help &amp; FAQ</a><span class="divide">|</span></li>
+							<li><a href="#" role="menuitem">Log Out</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="large-9 columns">
+					<section class="panel mm_PointsPanel">
+
+						<div class="row">
+							<div class="large-12 columns">
+								<h2>Welcome back, <strong>Steven!</strong></h2>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="large-2 columns">
+								<img src="../../images/myMailPoints.png" alt=""/>
+							</div>
+
+							<div class="large-5 columns">
+								<div class="mm_pointCounterHolder">
+									<ul>
+										<li class="mm_point" id="mm_digit1">0</li>
+										<li class="mm_point" id="mm_digit2">0</li>
+										<li class="mm_point" id="mm_digit3">0</li>
+										<li class="mm_point" id="mm_digit4">0</li>
+										<li class="mm_point" id="mm_digit5">0</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="large-5 columns">
+								<a class="button secondary emphasisBorder" href="#">Enter Unique Number</a>
+							</div>
+						</div>
+
+					</section><!--// Unique Numbers -->
+				</div>
+			</div>
+			<section class="mm_navBar">
+				<div class="row">
+					<nav class="top-bar mm_mainNav" role="navigation">
+
+						<ul class="title-area">
+							<li class="name"></li> 
+							<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+						</ul>
+
+						<section class="top-bar-section">
+
+							<ul class="left">
+
+								<li class="divider"></li>
+
+								<li class="mm_mainNavButton home icon"><a href="#">Home</a></li>
+
+								<li class="divider"></li>
+
+								<li class="mm_mainNavButton"><a href="#" class="active">See Rewards</a></li>
+
+								<li class="divider"></li>
+
+								<li class="mm_mainNavButton"><a href="#">Games</a></li>
+
+								<li class="divider" ></li>
+
+							</ul>
+
+						</section>
+					</nav>
+				</div>
+			</section><!--// Navigation -->
+			<div class="row">
+				<div class="large-12 columns">
+					<section class="prod-filter">
+						<form class="custom">
+							<div class="row">
+								<div class="large-3 columns"> <h2 class="small">Days &amp; Nights Out</h2></div>
+								<div class="large-9 columns">
+
+									<fieldset>
+										<div class="row">
+											<div class="large-6 columns">
+												<div class="row">
+													<div class="large-3 columns">
+														<label class="right inline" for="customDropdown1">Filter</label>
+													</div>
+													<div class="large-9 columns">
+														<select id="customDropdown1" class="medium hidden-field" data-id="1382968788794-VAMVx" name="customDropdown1">
+															<option>All</option>
+															<option>Dining</option>
+															<option>Cinema</option>
+															<option>Theatre</option>
+															<option>Parks</option>
+														</select>
+														<div class="custom dropdown medium mm_customDropDown" data-id="1382968788794-VAMVx">
+															<a class="current" href="#">Dining</a>
+															<a class="selector" href="#"></a>
+															<ul>
+																<li>All</li>
+																<li>Dining</li>
+																<li>Cinema</li>
+																<li>Theatre</li>
+																<li>Parks</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="large-6 columns">
+												<div class="row">
+													<div class="large-3 columns">
+														<label class="right inline" for="customDropdown2">Sort</label>
+													</div>
+													<div class="large-9 columns">
+														<select id="customDropdown2" class="medium hidden-field" data-id="1382968788794-VAMVx">
+															<option>Points value ascending</option>
+															<option>Points value desending</option>
+															<option>Alphabetical (A- Z)</option>
+														</select>
+														<div class="custom dropdown medium mm_customDropDown" data-id="1382968788794-VAMVx">
+															<a class="current" href="#">Points value ascending</a>
+															<a class="selector" href="#"></a>
+															<ul>
+																<li>Points value ascending</li>
+																<li>Points value desending</li>
+																<li>Alphabetical (A- Z)</li>
+															</ul>
+
+														</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</fieldset>
+								</div>
+							</div>
+						</form>
+					</section><!--// prod-filter -->
+				</div>
+			</div>
+			
+		</header><!--// Header -->
+
+	</div><!--// Wrapper -->
+
+	<script src="../../javascripts/vendor/jquery.js"></script>
+	<script src="../../javascripts/foundation/foundation.js"></script>
+	<script src="../../javascripts/foundation/foundation.topbar.js"></script>
+	<script src="../../javascripts/foundation/foundation.magellan.js"></script>
+	<script src="../../javascripts/foundation/foundation.dropdown.js"></script>
+	<script src="../../javascripts/foundation/foundation.forms.js"></script>
+	<script src="../../javascripts/foundation/foundation.section.js"></script>
+	<script src="../../javascripts/foundation/foundation.topbar.js"></script>
+
+	<script>
+
+	$(document).foundation();
+
+
+	</script>
+
+
+</body>
+</html>

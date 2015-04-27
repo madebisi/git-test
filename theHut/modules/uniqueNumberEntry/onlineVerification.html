@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="lt-ie9 lt-ie8 lt-ie7" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><![endif]-->
+<!--[if IE 7]><html class="lt-ie9 lt-ie8" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<title>Login 2</title>
+	<link rel="stylesheet" href="../../stylesheets/app.css" type="text/css"/>
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="../../stylesheets/ie8.css" type="text/css"/>
+	<![endif]-->
+	<script src="../../javascripts/vendor/custom.modernizr.js" type="text/javascript"></script>
+	<script src="../../javascripts/jquery/jquery-1.10.2.js" type="text/javascript"></script>
+	<script src="../../javascripts/angular/angular.min.js" type="text/javascript"></script>
+	<script src="../../javascripts/respond/respond.src.js" type="text/javascript"></script>
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+</head>
+<body>
+	<section class="content">
+		<section class="numberEntry">
+			<div class="row">
+				<div class="large-12 columns mm_formPanelHeader">
+					<h3>Enter Unique Number</h3>
+				</div>
+			</div>
+
+			<div class="row mm_blueBox">
+
+				<div class="row">
+					<div class="large-9 columns">
+						<h4>Online Verification System</h4>
+						<p>We're sorry that you're having problems with the Unique Number entry.</p>
+					</div>
+				</div>
+
+				<div class="row">
+
+					<div class="large-12 mm_dataArea">
+
+						<form class="custom">
+
+							<fieldset>
+								<div class="row">
+									<div class="large-7 columns">
+										<p>You will need your copy of the Mail and all supplements to hand.</p>
+										<p>Simply follow the steps below to have the Mail Points credited to your account.</p>
+										<h4>Step 1</h4>
+										<p>Please select the newspaper publication date that you're having problems with:</p>
+									</div>
+								</div>
+								<!--// Date  -->
+								<div class="row">
+									<div class="large-5 columns">
+										<select id="customDropdown1" class="medium hidden-field" data-id="1382968788794-VAMVx">
+											<option>Thursday 31st October 2013</option>
+											<option>Wednesday 30th October 2013</option>
+											<option>Tuesday 29th October 2013</option>
+											<option>Monday 28th October 2013</option>
+											<option>Sunday 27th October 2013</option>
+											<option>Saturday 26th October 2013</option>
+											<option>Friday 25th October 2013</option>
+											<option>Thursday 24th October 2013</option>
+											<option>Wednesday 23rd October 2013</option>
+											<option>Tuesday 22nd October 2013</option>
+											<option>Monday 21st October 2013</option>
+											<option>Sunday 20th October 2013</option>
+											<option>Saturday 19th October 2013</option>
+											<option>Friday 18th October 2013</option>
+										</select>
+
+										<div class="custom dropdown medium mm_customDropDown" data-id="1382968788794-VAMVx">
+											<a class="current" href="#">Select date</a>
+											<a class="selector" href="#">
+												<div class="icon-myMailGlyph1"></div>
+											</a>
+											<ul>
+												<li class="">Thursday 31st October 2013</li>
+												<li class="">Wednesday 30th October 2013</li>
+												<li class="">Tuesday 29th October 2013</li>
+												<li class="">Monday 28th October 2013</li>
+												<li class="">Sunday 27th October 2013</li>
+												<li class="">Saturday 26th October 2013</li>
+												<li class="">Friday 25th October 2013</li>
+												<li class="">Thursday 24th October 2013</li>
+												<li class="">Wednesday 23rd October 2013</li>
+												<li class="">Tuesday 22nd October 2013</li>
+												<li class="">Monday 21st October 2013</li>
+												<li class="">Sunday 20th October 2013</li>
+												<li class="">Saturday 19th October 2013</li>
+												<li class="">Friday 18th October 2013</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="large-12 columns">
+
+										<h4>Step 2</h4>
+										<p>Please click on the reason you are having problems entering your Unique
+											Number.</p>
+									</div>
+								</div>
+
+								<!--// radio  -->
+								<div class="row">
+									<div class="large-12 columns">
+										<label for="radio1" class="mm_labelSmall">
+											<input id="radio1" class="hidden-field" type="radio" style="display:none;" name="radio1">
+											<span class="custom radio checked"></span>
+											I have my copy of The Mail and there's no Unique Number printed
+										</label>
+									</div>
+								</div>
+
+								<!--// radio  -->
+								<div class="row">
+									<div class="large-12 columns">
+										<label for="radio2" class="mm_labelSmall">
+											<input id="radio2" class="hidden-field" type="radio" style="display:none;" name="radio2">
+											<span class="custom radio checked"></span>
+											I have my copy of The Mail and I can't read the Unique Number
+										</label>
+									</div>
+								</div>
+
+								<!--// radio  -->
+								<div class="row">
+									<div class="large-12 columns">
+										<label for="radio3" class="mm_labelSmall">
+											<input id="radio3" class="hidden-field" type="radio" style="display:none;" name="radio3">
+											<span class="custom radio checked"></span>
+											I tried to enter the Unique Number and was told it's been entered already
+										</label>
+									</div>
+								</div>
+
+								<button class="medium radius button secondary emphasisBorder" onclick="window.open('onlineVerificationQuestion.html')">Continue</button>
+
+								<button class="mm_cancelButton">Cancel</button>
+									
+
+
+							</fieldset>
+
+						</form>
+
+					</div><!-- mm_dataArea -->
+
+				</div>
+
+			</div><!-- mm_blueBox-->
+			
+			
+
+			<script src="../../javascripts/foundation/foundation.js"></script>
+
+			<script src="../../javascripts/foundation/foundation.abide.js"></script>
+
+			<script src="../../javascripts/foundation/foundation.alerts.js"></script>
+
+			<script src="../../javascripts/foundation/foundation.clearing.js"></script>
+
+			<script src="../../javascripts/foundation/foundation.cookie.js"></script>
+
+			<script src="../../javascripts/foundation/foundation.dropdown.js"></script>
+
+			<script src="../../javascripts/foundation/foundation.forms.js"></script>
+
+			<script src="../../javascripts/foundation/foundation.interchange.js"></script>
+
+			<script src="../../javascripts/foundation/foundation.joyride.js"></script>
+
+			<script src="../../javascripts/foundation/foundation.magellan.js"></script>
+
+			<script src="../../javascripts/foundation/foundation.orbit.js"></script>
+
+			<script src="../../javascripts/foundation/foundation.placeholder.js"></script>
+
+			<script src="../../javascripts/foundation/foundation.reveal.js"></script>
+
+			<script src="../../javascripts/foundation/foundation.section.js"></script>
+
+			<script src="../../javascripts/foundation/foundation.tooltips.js"></script>
+
+			<script src="../../javascripts/foundation/foundation.topbar.js"></script>
+
+
+			<script>
+				$(document).foundation();
+			</script>
+		</section>
+	</section>
+</body>
+</html>

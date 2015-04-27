@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="lt-ie9 lt-ie8 lt-ie7" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><![endif]-->
+<!--[if IE 7]><html class="lt-ie9 lt-ie8" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Login 2</title>
+    <link rel="stylesheet" href="../../stylesheets/app.css" type="text/css"/>
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="../../stylesheets/ie8.css" type="text/css"/>
+    <![endif]-->
+    <script src="../../javascripts/vendor/custom.modernizr.js" type="text/javascript"></script>
+    <script src="../../javascripts/jquery/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="../../javascripts/angular/angular.min.js" type="text/javascript"></script>
+    <script src="../../javascripts/respond/respond.src.js" type="text/javascript"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+</head>
+
+<body ng-app>
+
+	<div class="row">
+		<div class="large-12 columns mm_formPanelHeader">
+			<h3>My Account</h3>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="large-3 mm_accountTab active">
+			<h4>Points history</h4>
+		</div>
+		<div class="large-3 mm_accountTab">
+			<h4>Account details</h4>
+		</div>
+	</div>
+
+	<div class="row mm_blueBox" ng-controller="myAccountCtrl">
+
+		<div class="large-12 mm_dataArea">
+
+				<form class="custom">
+					
+					<fieldset class="mm_regForm">
+
+						<section>
+
+							<!--// Title  -->
+							<div class="row">
+							 	<div class="large-12 columns">
+
+									<div id="emailView">
+
+
+										<div class="row">
+											<div class="large-12 columns">
+												<h4>Email</h4>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="large-3 columns"><p>john.williamson@gmail.com</p></div>
+										</div>
+
+										<div class="mm_editButtonEmail"><button ng-click="switchEmailForm()">Change email address</button></div>
+
+									</div>
+
+									<div id="emailEdit">
+
+										<div class="row">
+											<div class="large-12 columns">
+												<h4>Email</h4>
+											</div>
+										</div>
+
+										<section class="row">
+								            <div class="large-8">
+								                <div class="mm_notificationBox mm_errorBox">
+								                    <span class="icon-myMailWarning"></span>
+								                    <p>Changing your email address will log you out of MyMail. Follow the instructions sent to your new email address to log back in.</p>
+								                </div>
+								            </div>
+								        </section>
+
+										<div class="row">
+											<div class="large-8 columns">
+													<div class="row">
+														<div class="large-5 columns"><p>Current email address</p></div>
+														<div class="large-7 columns mm_inputFloatField"><input type="text" placeholder="test@example.com" readonly></div>
+													</div>
+
+													<div class="row">
+														<div class="large-5 columns"><p>Enter new email address</p></div>
+														<div class="large-7 columns mm_inputFloatField"><input type="text" placeholder=""></div>
+													</div>
+
+													<div class="row">
+														<div class="large-5 columns"><p>Confirm email address</p></div>
+														<div class="large-7 columns mm_inputFloatField"><input type="text" placeholder=""></div>
+													</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="large-8 columns">
+
+												<article class="mm_formBox" style="padding:15px;">
+
+													<div class="row">
+														<div class="mm_infoCircle">i</div>
+														<p>Please be aware that if you have an account with You Beauty Discovery or Mail Plus using 
+													the same email address, changes made here will be reflected in these accounts after 24 hours.</p>
+													</div>	
+													
+												</article>
+											</div>
+										</div>
+
+										<button class="medium radius button secondary">Save Changes</button>
+
+										<button class="mm_cancelButton" ng-click="switchEmailForm()">Cancel</button>
+										
+									</div>
+								</div>
+							</div>
+
+						</section>
+						
+					</fieldset>
+
+				</form>
+
+		</div><!-- mm_dataArea -->
+
+		<!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>    MY DETAILS    <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+		
+		<div id="detailsView">
+
+				<form class="custom">
+							<section  class="large-12 mm_dataArea">
+								<fieldset class="mm_regForm">
+									<div class="row">
+									 	<div class="large-12 columns">
+												<div class="row">
+											 		<div class="large-12 columns">
+
+														<div class="row">
+															<div class="large-12 columns">
+																<h4>My details</h4>
+															</div>
+														</div>
+
+														<div class="row">
+															<div class="large-4 columns"><p>Title</p></div>
+															<div class="large-6 columns mm_inputFloatText"><p>Mr</p></div>
+														</div>
+
+														<div class="row">
+															<div class="large-4 columns"><p>First name</p></div>
+															<div class="large-6 columns mm_inputFloatText"><p>John</p></div>
+														</div>
+
+														<div class="row">
+															<div class="large-4 columns"><p>Surname</p></div>
+															<div class="large-6 columns mm_inputFloatText"><p>Williamson</p></div>
+														</div>
+
+														<div class="row">
+															<div class="large-4 columns"><p>Date of birth</p></div>
+															<div class="large-6 columns mm_inputFloatText"><p>12 / 8 / 1983</p></div>
+														</div>
+
+														<div class="mm_editButtonEmail"><button ng-click="switchDetailsForm()">Edit</button></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</section><!-- mm_dataArea -->
+
+
+							<section class="large-12 mm_dataArea">
+								<fieldset class="mm_regForm">
+										<div class="row">
+										 	<div class="large-12 columns">
+
+													<div class="row">
+														<div class="large-12 columns">
+															<h4>Password</h4>
+														</div>
+													</div>
+
+													<div class="row">
+														<div class="large-4 columns"><p>XXXXXXXXXX</p></div>
+													</div>
+
+													<div class="mm_editButtonEmail"><button ng-click="switchDetailsForm()">Change password</button></div>
+											</div>
+										</div>
+								</fieldset>
+							</section><!-- mm_dataArea -->
+
+
+
+							<section  class="large-12 mm_dataArea">
+								<fieldset class="mm_regForm">
+									<div class="row">
+									 	<div class="large-12 columns">
+												<div class="row">
+											 		<div class="large-12 columns">
+
+														<div class="row">
+															<div class="large-12 columns">
+																<h4>Contact and delivery details</h4>
+															</div>
+														</div>
+
+														<div class="row">
+															<div class="large-4 columns"><p>House Name or Number</p></div>
+															<div class="large-6 columns mm_inputFloatText"><p>34</p></div>
+														</div>
+
+														<div class="row">
+															<div class="large-4 columns"><p>Street</p></div>
+															<div class="large-6 columns mm_inputFloatText"><p>Elm Street</p></div>
+														</div>
+
+														<div class="row">
+															<div class="large-4 columns"><p>Town</p></div>
+															<div class="large-6 columns mm_inputFloatText"><p>Liverpool</p></div>
+														</div>
+
+														<div class="row">
+															<div class="large-4 columns"><p>County</p></div>
+															<div class="large-6 columns mm_inputFloatText"><p>Merseyside</p></div>
+														</div>
+
+														<div class="row">
+															<div class="large-4 columns"><p>Postcode</p></div>
+															<div class="large-6 columns mm_inputFloatText"><p>L10 4PP</p></div>
+														</div>
+
+														<div class="row">
+															<div class="large-4 columns"><p>Telephone</p></div>
+															<div class="large-6 columns mm_inputFloatText"><p>07901 234 567</p></div>
+														</div>
+
+														<div class="row">
+															<div class="large-4 columns"><p>Mobile</p></div>
+															<div class="large-6 columns mm_inputFloatText"><p>01234 567 890</p></div>
+														</div>
+
+														<div class="mm_editButtonEmail"><button ng-click="switchDetailsForm()">Edit</button></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</section><!-- mm_dataArea -->
+
+
+							<section  class="large-12 mm_dataArea">
+								<fieldset class="mm_regForm">
+									<div class="row">
+									 	<div class="large-12 columns">
+												<div class="row">
+											 		<div class="large-12 columns">
+
+														<div class="row">
+															<div class="large-12 columns">
+																<h4>Communication preferences</h4>
+
+																<p>My Mail is part of the Daily Mail & General Trust (DMGT) Group. We take your privacy seriously.<br><br>
+
+																By responding and providing your details, you agree that you will be contacted with relevant offers and services by
+																email, mail, phone or SMS. If you do not wish to receive this information, please change the following options.</p>
+
+																<hr style="margin:10px 0 15px 0">
+
+															</div>
+														</div>
+
+														<div class="row">
+															<div class="large-12 columns">
+
+																<div class="mm_editCommsBox"></div>
+																	
+																<p class="mm_checkBoxTsCs mm_labelSmall">
+																	Receive selected information from the Daily Mail
+																</p>
+															</div>
+														</div>
+
+														<div class="row">
+															<div class="large-12 columns">
+
+																<div class="mm_editCommsBox checked"></div>
+																	
+																<p class="mm_checkBoxTsCs mm_labelSmall">
+																	Receive selected information from the Daily Mail
+																</p>
+															</div>
+														</div>
+
+														<div class="row">
+															<div class="large-12 columns">
+																<div class="mm_editCommsBox"></div>
+
+																<p class="mm_checkBoxTsCs mm_labelSmall">
+																	Receive selected information from the Daily Mail & General Trust (DMGT) Group companies
+																</0>
+															</div>
+														</div>
+
+														<div class="row">
+															<div class="large-12 columns">
+																<div class="mm_editCommsBox checked"></div>
+
+																<p class="mm_checkBoxTsCs mm_labelSmall">
+																	By selecting, you agree to us using your details to understand how you interact with our website and
+																	thereby offering you a more personalised experience including matching offers to your interest. Please read
+																	more within the <a href="#">personalised experience policy</a>
+																</p>
+															</div>
+														</div>
+
+														<div class="mm_editButtonEmail"><button ng-click="switchDetailsForm()">Edit</button></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+
+							</section><!-- mm_dataArea -->
+
+					
+				</form>
+		</div>
+
+		<!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   EDIT DETAILS   <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+
+		<div id="detailsEdit">
+			<form class="custom">
+				
+					<section  class="large-12 mm_dataArea">
+						<fieldset class="mm_regForm">
+							<div class="row">
+							 	<div class="large-12 columns">
+										<div class="row">
+									 		<div class="large-12 columns">
+
+												<div class="row">
+													<div class="large-12 columns">
+														<h4>My details</h4>
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="large-4 columns"><p>Title</p></div>
+													<div class="large-6 columns mm_inputFloatField"><input type="text" placeholder=""></div>
+												</div>
+
+												<div class="row">
+													<div class="large-4 columns"><p>First name</p></div>
+													<div class="large-6 columns mm_inputFloatField"><input type="text" placeholder=""></div>
+												</div>
+
+												<div class="row">
+													<div class="large-4 columns"><p>Surname</p></div>
+													<div class="large-6 columns mm_inputFloatField"><input type="text" placeholder=""></div>
+												</div>
+
+												<div class="row">
+													<div class="large-4 columns"><p>Date of birth</p></div>
+													<div class="large-6 columns mm_inputFloatField">
+														
+														<div class="row">
+
+																<div class="large-4 columns">
+																	<select id="customDropdown1" class="medium hidden-field" data-id="1382968788794-VAMVx">
+																		<option>Day</option>
+																	</select>
+
+																	<div class="custom dropdown medium mm_customDropDown" data-id="1382968788794-VAMVx">
+																		<a class="current" href="#">Day</a>
+																		<a class="selector" href="#">
+																			<div class="icon-myMailGlyph1"></div>
+																		</a>
+																		<ul>
+																			<li class="">Day</li>
+																		</ul>
+																	</div>
+																</div>
+
+																<div class="large-4 columns">
+																	<select id="customDropdown1" class="medium hidden-field" data-id="1382968788794-VAMVx">
+																		<option>Month</option>
+																	</select>
+
+																	<div class="custom dropdown medium mm_customDropDown" data-id="1382968788794-VAMVx">
+																		<a class="current" href="#">Month</a>
+																		<a class="selector" href="#">
+																			<div class="icon-myMailGlyph1"></div>
+																		</a>
+																		<ul>
+																			<li class="">Month</li>
+																		</ul>
+																	</div>
+																</div>
+																<div class="large-4 columns">
+																	<select id="customDropdown1" class="medium hidden-field" data-id="1382968788794-VAMVx">
+																		<option>Year</option>
+																	</select>
+
+																	<div class="custom dropdown medium mm_customDropDown" data-id="1382968788794-VAMVx">
+																		<a class="current" href="#">Year</a>
+																		<a class="selector" href="#">
+																			<div class="icon-myMailGlyph1"></div>
+																		</a>
+																		<ul>
+																			<li class="">Year</li>
+																		</ul>
+																	</div>
+																</div>
+														</div>
+
+													</div>
+												</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<hr style="margin:10px 0 15px 0">
+
+							<div class="row">
+
+								 	<div class="large-12 columns">
+
+								 			<div class="row">
+												<div class="large-12 columns">
+													<h4>Password</h4>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="large-4 columns"><p>Current password</p></div>
+												<div class="large-6 columns mm_inputFloatField"><input type="password" placeholder=""></div>
+											</div>
+
+											<div class="row">
+												<div class="large-4 columns"><p>New password</p></div>
+												<div class="large-6 columns mm_inputFloatField"><input type="password" placeholder=""></div>
+											</div>
+
+											<div class="row">
+												<div class="large-4 columns"><p>Confirm password</p></div>
+												<div class="large-6 columns mm_inputFloatField"><input type="password" placeholder=""></div>
+											</div>
+
+									</div>
+							</div>
+							
+							<hr style="margin:10px 0 15px 0">
+
+							<div class="row">
+							 	<div class="large-12 columns">
+										<div class="row">
+									 		<div class="large-12 columns">
+
+												<div class="row">
+													<div class="large-12 columns">
+														<h4>Contact and delivery details</h4>
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="large-4 columns"><p>House Name or Number</p></div>
+													<div class="large-6 columns mm_inputFloatField"><input type="text" placeholder=""></div>
+												</div>
+
+												<div class="row">
+													<div class="large-4 columns"><p>Street</p></div>
+													<div class="large-6 columns mm_inputFloatField"><input type="text" placeholder=""></div>
+												</div>
+
+												<div class="row">
+													<div class="large-4 columns"><p>Town</p></div>
+													<div class="large-6 columns mm_inputFloatField"><input type="text" placeholder=""></div>
+												</div>
+
+												<div class="row">
+													<div class="large-4 columns"><p>County</p></div>
+													<div class="large-6 columns mm_inputFloatField"><input type="text" placeholder=""></div>
+												</div>
+
+												<div class="row">
+													<div class="large-4 columns"><p>Postcode</p></div>
+													<div class="large-6 columns mm_inputFloatField"><input type="text" placeholder=""></div>
+												</div>
+
+												<div class="row">
+													<div class="large-4 columns"><p>Telephone</p></div>
+													<div class="large-6 columns mm_inputFloatField"><input type="text" placeholder=""></div>
+												</div>
+
+												<div class="row">
+													<div class="large-4 columns"><p>Mobile</p></div>
+													<div class="large-6 columns mm_inputFloatField"><input type="text" placeholder=""></div>
+												</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<hr style="margin:10px 0 15px 0">
+
+							<div class="row">
+							 	<div class="large-12 columns">
+										<div class="row">
+									 		<div class="large-12 columns">
+
+												<div class="row">
+													<div class="large-12 columns">
+														<h4>Communication preferences</h4>
+
+														<p>My Mail is part of the Daily Mail & General Trust (DMGT) Group. We take your privacy seriously.<br><br>
+
+														By responding and providing your details, you agree that you will be contacted with relevant offers and services by
+														email, mail, phone or SMS. If you do not wish to receive this information, please change the following options.</p>
+
+														<hr style="margin:10px 0 15px 0">
+
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="large-12 columns">
+														<div class="mm_formCheckBox">
+															<input id="checkbox1" class="hidden-field" type="checkbox">
+															<span class="custom checkbox"></span>
+														</div>
+														<label for="checkbox1" class="mm_checkBoxTsCs mm_labelSmall">
+															1 Receive selected information from the Daily Mail
+														</label>
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="large-12 columns">
+														<div class="mm_formCheckBox">
+															<input id="checkbox2" class="hidden-field" type="checkbox"  checked="">
+															<span class="custom checkbox"></span>
+														</div>
+														<label for="checkbox2" class="mm_checkBoxTsCs mm_labelSmall">
+															Receive selected information from the Daily Mail
+														</label>
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="large-12 columns">
+														<div class="mm_formCheckBox">
+															<input id="checkbox3" class="hidden-field" type="checkbox">
+															<span class="custom checkbox"></span>
+														</div>
+														<label for="checkbox3" class="mm_checkBoxTsCs mm_labelSmall">
+															Receive selected information from the Daily Mail & General Trust (DMGT) Group companies
+														</label>
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="large-12 columns">
+														<div class="mm_formCheckBox">
+															<input id="checkbox4" class="hidden-field" type="checkbox"  checked="">
+															<span class="custom checkbox"></span>
+														</div>
+														<label for="checkbox4" class="mm_checkBoxTsCs mm_labelSmall">
+															By selecting, you agree to us using your details to understand how you interact with our website and
+															thereby offering you a more personalised experience including matching offers to your interest. Please read
+															more within the <a href="#">personalised experience policy</a>
+														</label>
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="large-8 columns">
+
+														<article class="mm_formBox" style="padding:15px;">
+
+															<div class="row">
+																<div class="mm_infoCircle">i</div>
+																<p>Please be aware that if you have an account with You Beauty Discovery or Mail Plus using 
+															the same email address, changes made here will be reflected in these accounts after 24 hours.</p>
+															</div>	
+															
+														</article>
+													</div>
+												</div>
+
+												<button class="medium radius button secondary">Save Changes</button>
+
+												<button class="mm_cancelButton" ng-click="switchDetailsForm()">Cancel</button>
+
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</fieldset>
+					</section><!-- mm_dataArea -->
+				
+			</form>
+		</div>
+
+	</div><!-- mm_blueBox-->
+
+	<div class="row">
+		<div class="large-12 columns mm_footerContact">
+			<p>Need help? <a href="#">Contact Us</a></p>
+		</div>
+	</div>
+
+	<div class="mm_footerHelpBar">
+		<div class="row">
+			<div class="large-12 columns">
+				<div class="mm_footerHelpCircle">?</div>
+				<p>My Mail help and FAQ's</p>
+			</div>
+		</div>
+	</div>
+
+<script src="../../javascripts/profile.js"></script>
+
+<script>
+	document.write('<script src=' +
+		('__proto__' in {} ? '../../javascripts/vendor/zepto' : '../../javascripts/vendor/jquery') +
+		'.js><\/script>')
+</script>
+
+<script src="../../javascripts/foundation/foundation.js"></script>
+
+<script src="../../javascripts/foundation/foundation.abide.js"></script>
+
+<script src="../../javascripts/foundation/foundation.alerts.js"></script>
+
+<script src="../../javascripts/foundation/foundation.clearing.js"></script>
+
+<script src="../../javascripts/foundation/foundation.cookie.js"></script>
+
+<script src="../../javascripts/foundation/foundation.dropdown.js"></script>
+
+<script src="../../javascripts/foundation/foundation.forms.js"></script>
+
+<script src="../../javascripts/foundation/foundation.interchange.js"></script>
+
+<script src="../../javascripts/foundation/foundation.joyride.js"></script>
+
+<script src="../../javascripts/foundation/foundation.magellan.js"></script>
+
+<script src="../../javascripts/foundation/foundation.orbit.js"></script>
+
+<script src="../../javascripts/foundation/foundation.placeholder.js"></script>
+
+<script src="../../javascripts/foundation/foundation.reveal.js"></script>
+
+<script src="../../javascripts/foundation/foundation.section.js"></script>
+
+<script src="../../javascripts/foundation/foundation.tooltips.js"></script>
+
+<script src="../../javascripts/foundation/foundation.topbar.js"></script>
+
+
+<script>
+	$(document).foundation();
+</script>
+
+</body>
+</html>

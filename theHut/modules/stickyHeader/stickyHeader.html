@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Sticky Header</title>
+
+	<link rel="stylesheet" href="../../stylesheets/app.css">
+
+	<script src="../../javascripts/vendor/custom.modernizr.js"></script>
+
+</head>
+<body>
+	<div class="wrapper">
+		<section class="header mm_loggedIn fixed" data-magellan-expedition="" style="position:fixed; top:0">
+
+			<div class="row">
+
+				<div class="large-3 columns">
+					<section class="logo">
+						<h1><a href="#" class="site-logo"><img alt="DMG logo" src="../../images/logo.png"/></a></h1>
+					</section><!--// Logo -->
+				</div>
+
+				<div class="large-9 columns">
+					<div class="mm_topLogIn">
+						<ul class="inline-list">
+							<li><a href="#">Help &amp; FAQ</a><span class="divide">|</span></li>
+							<li><a href="#">Log Out</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="large-9 columns">
+					<section class="panel mm_PointsPanel">
+
+						<div class="row">
+							<div class="large-12 columns">
+								<h2>Welcome back, <strong>Steven!</strong></h2>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="large-2 columns">
+								<img src="../../images/myMailPoints.png"/>
+							</div>
+
+							<div class="large-5 columns">
+								<div class="mm_pointCounterHolder">
+									<ul>
+										<li class="mm_point" id="mm_digit1">0</li>
+										<li class="mm_point" id="mm_digit2">0</li>
+										<li class="mm_point" id="mm_digit3">0</li>
+										<li class="mm_point" id="mm_digit4">0</li>
+										<li class="mm_point" id="mm_digit5">0</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="large-5 columns">
+								<a class="button secondary" href="#">Enter Unique Number</a>
+							</div>
+						</div>
+
+					</section><!--// Unique Numbers -->
+				</div>
+			</div>
+			<section class="mm_navBar">
+
+			<div  class="row">
+
+				<nav class="top-bar mm_mainNav">
+
+				
+					<ul class="title-area">
+						
+						 <li class="name"></li> 
+						<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+					</ul>
+
+					<section class="top-bar-section">
+
+						<ul class="left">
+
+						  <li class="divider"></li>
+
+						  <li class="mm_mainNavButton"><a href="#">Home</a></li>
+
+						  <li class="divider"></li>
+
+						  <li class="mm_mainNavButton"><a href="#">Browse Rewards</a></li>
+
+						  <li class="divider"></li>
+
+						  <li class="mm_mainNavButton"><a href="#">Games</a></li>
+
+						  <li class="divider"></li>
+
+						  <li class="mm_mainNavButton"><a href="#">My Account</a></li>
+
+						  <li class="divider"></li>
+
+						  <li class="has-dropdown mm_mainNavButton">
+
+						  	<a class="button mm_blueButton small">My Mail</a>
+
+						   <!--  <ul class="dropdown">
+								<li><label>Level One</label></li>
+								<li><a href="#">Sub-item 1</a></li>
+								<li><a href="#">Sub-item 2</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Sub-item 3</a></li>
+								<li><a href="#">Sub-item 4</a></li>
+								<li><a href="#">Sub-item 5</a></li>
+						    </ul> -->
+
+						  </li>
+
+						  <li class="divider"></li>
+
+						</ul>
+
+					</section>
+        		</nav>
+	  		</div>
+	  	</section>
+<!--// mm_navBar -->
+			<div class="row">
+				<div class="large-12 columns">
+					<section class="prod-filter">
+						<form class="custom">
+							<div class="row">
+								<div class="large-3 columns"> <h2 class="small">Days &amp; Nights Out</h2></div>
+								<div class="large-9 columns">
+
+									<fieldset>
+										<div class="row">
+											<div class="large-6 columns">
+												<div class="row">
+													<div class="large-3 columns">
+														<label class="right inline" for="">Filter</label>
+													</div>
+													<div class="large-9 columns">
+														<select id="customDropdown1" class="medium hidden-field" data-id="1382968788794-VAMVx">
+															<option>All</option>
+															<option>Dining</option>
+															<option>Cinema</option>
+															<option>Theatre</option>
+															<option>Parks</option>
+														</select>
+														<div class="custom dropdown medium mm_customDropDown" data-id="1382968788794-VAMVx">
+															<a class="current" href="#">Dining</a>
+															<a class="selector" href="#"></a>
+															<ul>
+																<li class="">All</li>
+																<li class="">Dining</li>
+																<li class="">Cinema</li>
+																<li class="">Theatre</li>
+																<li class="">Parks</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="large-6 columns">
+												<div class="row">
+													<div class="large-3 columns">
+														<label class="right inline">Sort</label>
+													</div>
+													<div class="large-9 columns">
+														<select id="customDropdown1" class="medium hidden-field" data-id="1382968788794-VAMVx">
+															<option>Points value ascending</option>
+															<option>Points value desending</option>
+															<option>Alphabetical (A- Z)</option>
+														</select>
+														<div class="custom dropdown medium mm_customDropDown" data-id="1382968788794-VAMVx">
+															<a class="current" href="#">Points value ascending</a>
+															<a class="selector" href="#"></a>
+															<ul>
+																<li class="">Points value ascending</li>
+																<li class="">Points value desending</li>
+																<li class="">Alphabetical (A- Z)</li>
+															</ul>
+
+														</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</fieldset>
+								</div>
+							</div>
+						</form>
+					</section><!--// prod-filter -->
+				</div>
+			</div>
+			
+		</section><!--// Header -->
+
+	</div><!--// Wrapper -->
+
+	<script src="../../javascripts/vendor/jquery.js"></script>
+	<script src="../../javascripts/foundation/foundation.js"></script>
+	<script src="../../javascripts/foundation/foundation.topbar.js"></script>
+	<script src="../../javascripts/foundation/foundation.magellan.js"></script>
+	<script src="../../javascripts/foundation/foundation.dropdown.js"></script>
+	<script src="../../javascripts/foundation/foundation.forms.js"></script>
+	<script src="../../javascripts/foundation/foundation.section.js"></script>
+	<script src="../../javascripts/foundation/foundation.topbar.js"></script>
+
+	<script>
+
+	$(document).foundation();
+	// (function() {
+	// 	orig = $.fn.css;
+	// 	$.fn.css = function() {
+	// 		var result = orig.apply(this, arguments);
+	// 		$(this).trigger("stylechanged");
+	// 		return result;
+	// 	}
+	// })();
+
+$(document).ready(function($) {
+
+		// Mega Menu
+		$(".has-megaMenu a").on('click', function(){
+			$(".mm_megaMenu").slideToggle("slow");
+		});
+
+
+	});
+
+</script>
+
+
+</body>
+</html>

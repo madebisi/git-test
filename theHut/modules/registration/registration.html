@@ -1,0 +1,695 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>     <html class="ie6" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><![endif]-->
+<!--[if IE 7]>        <html class="ie7" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><![endif]-->
+<!--[if IE 8]>        <html class="ie8" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><![endif]-->
+<!--[if IE 9]>        <html class="ie9" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<title>Login 2</title>
+	<link rel="stylesheet" href="../../stylesheets/app.css" type="text/css"/>
+	<!--[if lt IE 10]>
+		<link rel="stylesheet" href="../../stylesheets/ie8.css" type="text/css"/>
+	<![endif]-->
+	<script src="../../javascripts/vendor/custom.modernizr.js" type="text/javascript"></script>
+	<script src="../../javascripts/jquery/jquery-1.10.2.js" type="text/javascript"></script>
+	<script src="../../javascripts/angular/angular.min.js" type="text/javascript"></script>
+	<script src="../../javascripts/respond/respond.src.js" type="text/javascript"></script>
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+
+	<script>
+
+		function formSubmit(x){
+
+			console.log(x);
+		}
+
+
+	</script>
+
+
+</head>
+<body ng-app>	
+	<section class="content">
+		<section class="registration">	
+
+			<div class="row">
+				<div class="large-12 columns mm_formPanelHeader">
+					<h3>New Member Registration</h3>
+				</div>
+			</div>
+
+			<div class="row mm_blueBox" ng-controller="registrationCtrl">
+
+				<section class="row mm_regStepCounter">
+					
+					<div class="large-4 columns">
+						<div class="mm_regStepSection1 white">
+							<a ng-click="regProgress(1)"><h4>Step 1</h4></a>
+							<a ng-click="regProgress(1)"><div class="mm_regDot"></div></a>
+						</div>
+					</div>
+					<div class="large-4 columns">
+						<div class="mm_regStepSection2 grey">
+							<a ng-click="regProgress(2)"><h4>Step 2</h4></a>
+							<a ng-click="regProgress(2)"><div class="mm_regDot"></div></a>
+						</div>
+					</div>
+					<div class="large-4 columns">
+						<div class="mm_regStepSection3 grey">
+							<a ng-click="regProgress(3)"><h4>Step 3</h4></a>
+							<a ng-click="regProgress(3)"><div class="mm_regDot"></div></a>
+						</div>
+					</div>	
+				</section>
+
+				<section class="row mm_regStepCounter">
+					
+					<div class="large-6 columns">
+						<div class="mm_regStepSection2">
+							<div class="mm_regLine"></div>
+						</div>
+					</div>
+					<div class="large-6 columns">
+						<div class="mm_regStepSection3">
+							<div class="mm_regLine"></div>
+						</div>
+					</div>
+				</section>
+
+				<section class="row mm_regStepCounter">
+					
+					<div class="large-4 columns">
+						<div class="mm_regStepSection1 white">
+							<a ng-click="regProgress(1)"><h4>My details</h4></a>
+						</div>
+					</div>
+
+					<div class="large-4 columns">
+						<div class="mm_regStepSection2 grey">
+							<a ng-click="regProgress(2)"><h4>Contact</h4></a>
+						</div>
+					</div>
+					<div class="large-4 columns">
+						<div class="mm_regStepSection3 grey">
+							<a ng-click="regProgress(3)"><h4>About you</h4></a>
+						</div>
+					</div>
+				</section>
+
+				<div class="row">
+					<div class="large-12 columns mm_regFormIntro">
+						<div id="mm_regFormIntroText1" class="active">
+							<p>Register your details to become a member of My Mail. Items marked with * are required.</p>
+						</div>
+						<div id="mm_regFormIntroText2" class="">
+							<p>Please provide a telephone number in case we need to contact you regarding your Rewards/offers if necessary.</p>
+						</div>
+						<div id="mm_regFormIntroText3" class="">
+							<p>Please tell us a bit more about you</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="large-12 mm_dataArea">
+
+					<form class="custom">
+						
+						<fieldset class="mm_regForm">
+
+									<!-- //////////////////////////////////////////////////   STEP 1 ///////// -->
+
+									<section id="mm_regFormSection1" class="active">
+
+										<!--// Title  -->
+										<div class="row">
+											<div class="large-5 columns">
+				title: {{title}}
+												<div class="row">
+													<div class="large-6 columns">
+														<label class="mm_labelLarge">Title<span>*</span></label>
+											<select id="customDropdown1" class="medium hidden-field" data-id="1382968788794-VAMVx" onChange="formSubmit"(this) ng-model="title">
+															<option value="Mr">Mr</option>
+															<option value="Mrs">Mrs</option>
+															<option value="Miss">Miss</option>
+															<option value="Ms">Ms</option>
+														</select>
+														<div class="custom dropdown medium mm_customDropDown" data-id="1382968788794-VAMVx">
+															<a class="current" href="#">Choose title</a>
+															<a class="selector" href="#"></a>
+															<ul>
+																<li class="">Mr</li>
+																<li class="">Mrs</li>
+																<li class="">Miss</li>
+																<li class="">Ms</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="large-12 columns">
+														<label class="mm_labelLarge">First Name<span>*</span></label>
+														<input type="text" placeholder="">
+													</div>
+												</div>
+												<div class="row">
+													<div class="large-12 columns">
+														<label class="mm_labelLarge">Surname<span>*</span></label>
+														<input type="text" placeholder="">
+													</div>
+												</div>
+											</div>
+
+											<div class="large-5 columns mm_columnFix">
+												
+												<div class="row">
+													<div class="large-12 columns">
+
+														<label class="mm_labelLarge">Date of Birth<span>*</span></label>
+													</div>
+												</div>
+
+												<div class="row">
+
+													<div class="large-4 columns">
+														<select id="customDropdown1" class="medium hidden-field" data-id="1382968788794-VAMVx">
+															<option>1</option>
+															<option>2</option>
+															<option>3</option>
+															<option>4</option>
+															<option>5</option>
+															<option>6</option>
+															<option>7</option>
+															<option>8</option>
+															<option>9</option>
+															<option>10</option>
+															<option>11</option>
+															<option>12</option>
+															<option>13</option>
+															<option>14</option>
+															<option>15</option>
+															<option>16</option>
+															<option>17</option>
+															<option>18</option>
+															<option>19</option>
+															<option>20</option>
+															<option>21</option>
+															<option>22</option>
+															<option>23</option>
+															<option>24</option>
+															<option>25</option>
+															<option>26</option>
+															<option>27</option>
+															<option>28</option>
+															<option>29</option>
+															<option>30</option>
+															<option>31</option>
+														</select>
+
+														<div class="custom dropdown medium mm_customDropDown" data-id="1382968788794-VAMVx">
+															<a class="current" href="#">Day</a>
+															<a class="selector" href="#"></a>
+															<ul>
+																<li class="">1</li>
+																<li class="">2</li>
+																<li class="">3</li>
+																<li class="">4</li>
+																<li class="">5</li>
+																<li class="">6</li>
+																<li class="">7</li>
+																<li class="">8</li>
+																<li class="">9</li>
+																<li class="">10</li>
+																<li class="">11</li>
+																<li class="">12</li>
+																<li class="">13</li>
+																<li class="">14</li>
+																<li class="">15</li>
+																<li class="">16</li>
+																<li class="">17</li>
+																<li class="">18</li>
+																<li class="">19</li>
+																<li class="">20</li>
+																<li class="">21</li>
+																<li class="">22</li>
+																<li class="">23</li>
+																<li class="">24</li>
+																<li class="">25</li>
+																<li class="">26</li>
+																<li class="">27</li>
+																<li class="">28</li>
+																<li class="">29</li>
+																<li class="">30</li>
+																<li class="">31</li>
+															</ul>
+														</div>
+													</div>
+
+													<div class="large-4 columns">
+
+														<select id="customDropdown1" class="medium hidden-field" data-id="1382968788794-VAMVx">
+															<option>January</option>
+															<option>February</option>
+															<option>March</option>
+															<option>April</option>
+															<option>May</option>
+															<option>June</option>
+															<option>July</option>
+															<option>August</option>
+															<option>September</option>
+															<option>October</option>
+															<option>November</option>
+															<option>December</option>
+														</select>
+
+														<div class="custom dropdown medium mm_customDropDown" data-id="1382968788794-VAMVx">
+															<a class="current" href="#">Month</a>
+															<a class="selector" href="#"></a>
+															<ul>
+																<li class="">January</li>
+																<li class="">February</li>
+																<li class="">March</li>
+																<li class="">April</li>
+																<li class="">May</li>
+																<li class="">June</li>
+																<li class="">July</li>
+																<li class="">August</li>
+																<li class="">September</li>
+																<li class="">October</li>
+																<li class="">November</li>
+																<li class="">December</li>
+															</ul>
+														</div>
+													</div>
+
+													<div class="large-4 columns">
+														<select id="customDropdown1" class="medium hidden-field" data-id="1382968788794-VAMVx">
+															<option>1980</option>
+															<option>1981</option>
+															<option>1982</option>
+															<option>1983</option>
+															<option>1984</option>
+														</select>
+
+														<div class="custom dropdown medium mm_customDropDown" data-id="1382968788794-VAMVx">
+															<a class="current" href="#">Year</a>
+															<a class="selector" href="#"></a>
+															<ul>
+																<li class="">1980</li>
+																<li class="">1981</li>
+																<li class="">1982</li>
+																<li class="">1983</li>
+																<li class="">1984</li>
+																<li class="">1985</li>
+															</ul>
+														</div>
+													</div>
+													
+												</div>
+
+												<div class="row">
+													<div class="large-12 columns">
+														<label class="mm_labelLarge">Email address<span>*</span></label>
+														<input type="text" placeholder="">
+													</div>
+												</div>
+												<div class="row">
+													<div class="large-12 columns">
+														<label class="mm_labelLarge">Confirm email address<span>*</span></label>
+														<input type="text" placeholder="">
+													</div>
+												</div>
+											</div>
+
+										</div><!-- row Title-->
+
+										<hr>
+
+										<!--// Password  -->
+										<div class="row">
+											<div class="large-5 columns">
+												
+												<div class="row">
+													<div class="large-12 columns">
+
+														<label class="mm_labelLarge">Choose Password<span>*</span></label>
+
+														<p>Passwords must be between 8-20 characters with at least one uppercase letter and one number.</p>
+														
+														<input type="password" placeholder="">
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="large-12 columns">
+														<label class="mm_labelLarge">Confirm Password<span>*</span></label>
+														<input type="password" placeholder="">
+													</div>
+												</div><!-- row password -->
+
+											</div>
+										</div>
+
+										<button ng-click="submitForm(2)">Continue</button>
+
+										<button class="mm_cancelButton">Cancel</button>
+
+									</section>
+
+									<!-- //////////////////////////////////////////////////   STEP 2 ///////// -->
+
+									<section id="mm_regFormSection2" class="">
+
+										<!--// Contact  -->
+										<div class="row" ng-controller="addressCtrl">
+											<div class="large-5 columns">
+												
+												<div class="row">
+													<div class="large-12 columns">
+														<label class="mm_labelLarge">Contact phone number</label>
+														<input type="text" placeholder="">
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="large-12 columns">
+														<h4>Your address</h4>
+														<p>Please enter your postcode and find your address from the list provided. 
+															If you are experiencing 
+															difficulties finding your address, 
+															please <a href="#">contact us</a></p>
+														</div>
+													</div>
+													<div class="row">
+														<div class="large-12 columns">
+															<label class="mm_labelLarge">Postcode<span>*</span></label>
+															<input type="text" placeholder="">
+															<button ng-click="regProgress(3)">Find address</button>
+															<p><a  ng-click="openManualFields()">Enter address manually</a></p>
+														</div>
+													</div>
+													<div class="row" id="mm_manualAddressFields" style="display:none">
+														<div class="large-12 columns">
+															<h4>House Name or Number</h4>
+															<input type="text" placeholder="">
+														</div>
+														<div class="large-12 columns">
+															<h4>Street</h4>
+															<input type="text" placeholder="">
+														</div>
+														<div class="large-12 columns">
+															<h4>Town</h4>
+															<input type="text" placeholder="">
+														</div>
+														<div class="large-12 columns">
+															<h4>County</h4>
+															<input type="text" placeholder="">
+														</div>
+														<div class="large-6 columns" style="float:left;">
+															<h4>Postcode</h4>
+															<input type="text" placeholder="">
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="large-12 columns">
+													<hr>
+													<h4>Communication preferences</h4>
+													<p>My Mail is part of the Daily Mail & General Trust (DMGT) Group. We take your privacy seriously.
+														<br><br>
+														By responding and providing your details, you agree that you will be contacted with relevant offers and services by email, mail, phone or SMS. If you do not wish to receive this information, please select the following options.</p>
+
+												</div>
+											</div>
+
+											<div class="row">
+
+												<div class="large-12 columns">
+
+													<div class="row">
+														<div class="large-12 columns">
+															<div class="mm_formCheckBox">
+																<input id="checkbox1" class="hidden-field" type="checkbox"  checked="">
+																<span class="custom checkbox"></span>
+															</div>
+															<label for="checkbox1" class="mm_checkBoxTsCs">
+																Receive selected information from the Daily Mail
+															</label>
+														</div>
+													</div>
+
+													<div class="row">
+														<div class="large-12 columns">
+															<div class="mm_formCheckBox">
+																<input id="checkbox2" class="hidden-field" type="checkbox"  checked="">
+																<span class="custom checkbox"></span>
+															</div>
+															<label for="checkbox2" class="mm_checkBoxTsCs">
+																Receive selected information from the Daily Mail
+															</label>
+														</div>
+													</div>
+
+													<div class="row">
+														<div class="large-12 columns">
+															<div class="mm_formCheckBox">
+																<input id="checkbox3" class="hidden-field" type="checkbox"  checked="">
+																<span class="custom checkbox"></span>
+															</div>
+															<label for="checkbox3" class="mm_checkBoxTsCs">
+																Receive selected information from the Daily Mail & General Trust (DMGT) Group companies
+															</label>
+														</div>
+													</div>
+
+													<div class="row">
+														<div class="large-12 columns">
+															<div class="mm_formCheckBox">
+																<input id="checkbox4" class="hidden-field" type="checkbox"  checked="">
+																<span class="custom checkbox"></span>
+															</div>
+															<label for="checkbox4" class="mm_checkBoxTsCs">
+																By selecting, you agree to us using your details to understand how you interact with our website and
+																thereby offering you a more personalised experience including matching offers to your interest. Please read
+																more within the <a href="#">personalised experience policy</a>
+															</label>
+														</div>
+													</div>
+
+												</div>
+											</div>
+
+											<button ng-click="regProgress(3)">Continue</button>
+
+											<button class="mm_cancelButton">Cancel</button>
+
+									</section>
+
+									<!-- //////////////////////////////////////////////////   STEP 3 ///////// -->
+
+									<section id="mm_regFormSection3" class="">
+
+										<!--// Contact  -->
+										<div class="row">
+											<div class="large-7 columns">
+												<h4>How often do you read the Daily Mail (Mon-Fri)?*</h4>
+											</div>
+
+											<div class="large-4 columns">
+												<div class="large-12 columns">
+
+													<select id="customDropdown1" class="medium hidden-field" data-id="1382968788794-VAMVx">
+														<option>0 times a week</option>
+														<option>Once a week</option>
+														<option>Twice a week</option>
+														<option>3 times a week</option>
+														<option>4 times a week</option>
+														<option>5 times a week</option>
+													</select>
+													<div class="custom dropdown medium mm_customDropDown" data-id="1382968788794-VAMVx">
+														<a class="current" href="#">0 times a week</a>
+														<a class="selector" href="#">
+															<div class="icon-myMailGlyph1"></div>
+														</a>
+														<ul>
+															<li class="">0 times a week</li>
+															<li class="">Once a week</li>
+															<li class="">Twice a week</li>
+															<li class="">3 times a week</li>
+															<li class="">4 times a week</li>
+															<li class="">5 times a week</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="large-7 columns">
+												<h4>How often do you read Saturday's Daily Mail?*</h4>
+											</div>
+
+											<div class="large-4 columns">
+												<div class="large-12 columns">
+
+													<select id="customDropdown1" class="medium hidden-field" data-id="1382968788794-VAMVx">
+														<option>0 times a month</option>
+														<option>Once a month</option>
+														<option>Twice a month</option>
+														<option>3 times a month</option>
+														<option>4 times a month</option>
+													</select>
+													<div class="custom dropdown medium mm_customDropDown" data-id="1382968788794-VAMVx">
+														<a class="current" href="#">0 times a month</a>
+														<a class="selector" href="#">
+															<div class="icon-myMailGlyph1"></div>
+														</a>
+														<ul>
+															<li class="">0 times a month</li>
+															<li class="">Once a month</li>
+															<li class="">Twice a month</li>
+															<li class="">3 times a month</li>
+															<li class="">4 times a month</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="large-7 columns">
+												<h4>How often do you read Sunday's Daily Mail?*</h4>
+											</div>
+
+											<div class="large-4 columns">
+												<div class="large-12 columns">
+
+													<select id="customDropdown1" class="medium hidden-field" data-id="1382968788794-VAMVx">
+														<option>0 times a month</option>
+														<option>Once a month</option>
+														<option>Twice a month</option>
+														<option>3 times a month</option>
+														<option>4 times a month</option>
+													</select>
+													<div class="custom dropdown medium mm_customDropDown" data-id="1382968788794-VAMVx">
+														<a class="current" href="#">0 times a month</a>
+														<a class="selector" href="#">
+															<div class="icon-myMailGlyph1"></div>
+														</a>
+														<ul>
+															<li class="">0 times a month</li>
+															<li class="">Once a month</li>
+															<li class="">Twice a month</li>
+															<li class="">3 times a month</li>
+															<li class="">4 times a month</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="large-12 columns">
+												<hr>
+												<h4>Agree terms & conditions</h4>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="large-12 columns">
+												<div class="mm_formCheckBox">
+													<input id="checkbox1" class="hidden-field" type="checkbox"  checked="">
+													<span class="custom checkbox"></span>
+												</div>
+
+												<label for="checkbox1" class="mm_checkBoxTsCs mm_labelSmall">
+													I agree to the <a href="#">terms and conditions,</a> <a href="#">Privacy and cookies policy</a>
+												</label>
+											</div>
+										</div>
+
+										<button class="medium radius button secondary emphasisBorder" ng-click="regProgress(4)">Submit</button>
+
+										<button class="mm_cancelButton">Cancel</button>
+
+									</section>
+
+						</fieldset>
+
+					</form>
+
+				</div><!-- mm_dataArea -->
+
+			</div><!-- mm_blueBox-->
+
+			<div class="row">
+				<div class="large-12 columns mm_footerContact">
+					<p>Need help? <a href="#">Contact Us</a></p>
+				</div>
+			</div>
+
+			<div class="mm_footerHelpBar">
+				<div class="row">
+					<div class="large-12 columns">
+						<div class="mm_footerHelpCircle">?</div>
+						<p>My Mail help and FAQ's</p>
+					</div>
+				</div>
+			</div>
+
+			<script src="../../javascripts/myMail_registration.js"></script>
+
+			<script src="../../javascripts/myMailApp.js"></script>
+
+			<script>
+				document.write('<script src=' +
+					('__proto__' in {} ? '../../javascripts/vendor/zepto' : '../../javascripts/vendor/jquery') +
+					'.js><\/script>')
+			</script>
+
+			<script src="../../javascripts/foundation/foundation.js"></script>
+
+			<script src="../../javascripts/foundation/foundation.abide.js"></script>
+
+			<script src="../../javascripts/foundation/foundation.alerts.js"></script>
+
+			<script src="../../javascripts/foundation/foundation.clearing.js"></script>
+
+			<script src="../../javascripts/foundation/foundation.cookie.js"></script>
+
+			<script src="../../javascripts/foundation/foundation.dropdown.js"></script>
+
+			<script src="../../javascripts/foundation/foundation.forms.js"></script>
+
+			<script src="../../javascripts/foundation/foundation.interchange.js"></script>
+
+			<script src="../../javascripts/foundation/foundation.joyride.js"></script>
+
+			<script src="../../javascripts/foundation/foundation.magellan.js"></script>
+
+			<script src="../../javascripts/foundation/foundation.orbit.js"></script>
+
+			<script src="../../javascripts/foundation/foundation.placeholder.js"></script>
+
+			<script src="../../javascripts/foundation/foundation.reveal.js"></script>
+
+			<script src="../../javascripts/foundation/foundation.section.js"></script>
+
+			<script src="../../javascripts/foundation/foundation.tooltips.js"></script>
+
+			<script src="../../javascripts/foundation/foundation.topbar.js"></script>
+
+			<script>
+				$(document).foundation();
+			</script>
+
+
+		</section>
+	</section>
+</body>
+</html>

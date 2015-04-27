@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="lt-ie9 lt-ie8 lt-ie7" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><![endif]-->
+<!--[if IE 7]><html class="lt-ie9 lt-ie8" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Login 2</title>
+    <link rel="stylesheet" href="../../stylesheets/app.css" type="text/css"/>
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="../../stylesheets/ie8.css" type="text/css"/>
+    <![endif]-->
+    <script src="../../javascripts/vendor/custom.modernizr.js" type="text/javascript"></script>
+    <script src="../../javascripts/jquery/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="../../javascripts/angular/angular.min.js" type="text/javascript"></script>
+    <script src="../../javascripts/respond/respond.src.js" type="text/javascript"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+</head>
+
+<body ng-app>
+
+	<div class="row">
+		<div class="large-12 columns mm_formPanelHeader">
+			<h3>My Account</h3>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="large-3 mm_accountTab active">
+			<h4>Points history</h4>
+		</div>
+		<div class="large-3 mm_accountTab">
+			<h4>Account details</h4>
+		</div>
+	</div>
+
+	<div class="row mm_blueBox" ng-controller="myAccountCtrl">
+
+					<section  class="large-12 mm_dataArea">
+							<div class="row">
+							 	<div class="large-6 columns">
+										
+										<div class=" large-6 columns mm_pointsHistoryCounter mm_pointsCollected">5,123</div>
+										<div class=" large-5 columns"><p>Total Mail Points collected to date</p></div>
+									
+								</div>
+
+								<div class="large-6 columns ">
+										
+									<div class="large-6 columns mm_pointsHistoryCounter mm_pointsRedeemed">1,563</div>
+									<div class="large-5 columns"><p>Total Mail Points redeemed to date</p></div>
+
+								</div>
+							</div>
+
+					</section><!-- mm_dataArea -->
+
+					<div class="row">
+						<div class="large-9 columns">
+							<h4>Rewards redeemed</h4>
+						</div>
+						
+					</div>
+
+					<section class="large-12 mm_dataArea mm_pointTable" ng-controller="pointsCtrl">
+						
+							<div class="row" ng-click="openPanel()">
+								<div  class="large-12 columns">
+									<h4>Rewards redeemed in 2013</h4>
+									<div id="pointsToggle" class="mm_pointsCircle open"></div>
+								</div>
+							</div>
+
+						<div id="pointTable">
+
+							<ul class="row mm_pointTableTop">
+								<li class="large-2 columns mm_pointCol1"><p>Date</p></li>
+								<li class="large-2 columns mm_pointCol2"><p>Order number</p></li>
+								<li class="large-4 columns mm_pointCol3"><p>Reward</p></li>
+								<li class="large-2 columns mm_pointCol4"><p>Points value</p></li>
+								<li class="large-2 columns mm_pointCol5"><p>Details</p></li>
+							</ul>
+							
+							<article ng-controller="itemCtrl">
+
+								<ul class="row closedTab">
+									<li class="large-2 columns mm_pointCol1"><p>12 / 05 /2013</p></li>
+									<li class="large-2 columns mm_pointCol2"><p>1234567</p></li>
+									<li class="large-4 columns mm_pointCol3"><p><strong>£2.50 Caffe Nero Gift Card £5 Pizza Express eGiftcode</strong></p></li>
+									<li class="large-2 columns mm_pointCol4"><p><strong>1,000</strong></p></li>
+									<li class="large-2 columns mm_pointCol5"><a ng-click="seeDetails()">{{togMessage}}</a></li>
+								</ul>
+
+								<section ng-class="{mm_show: open, mm_hide: !open}" id="details" class="row mm_pointHistoryDetails">
+							 		<div class="large-12 columns">
+										<p>Dispatch address:</p>
+										<p>Address line 1 </p>
+										<p>Address line 2 </p>
+										<p>City/Town Postcode</p>
+										<br>
+										<p>Problems with this order? <a href="#">Contact customer services</a></p>
+							 		</div>
+								</section>
+
+							</article>
+
+							<article ng-controller="itemCtrl">
+								<ul class="row">
+									<li class="large-2 columns mm_pointCol1"><p>12 / 05 /2013</p></li>
+									<li class="large-2 columns mm_pointCol2"><p>1234567</p></li>
+									<li class="large-4 columns mm_pointCol3"><p><strong>£2.50 Caffe</strong></p></li>
+									<li class="large-2 columns mm_pointCol4"><p><strong>1,000</strong></p></li>
+									<li class="large-2 columns mm_pointCol5"><a ng-click="seeDetails()">{{togMessage}}</a></li>
+								</ul>
+
+								<section ng-class="{mm_show: open, mm_hide: !open}" id="details" class="row mm_pointHistoryDetails">
+							 		<div class="large-12 columns">
+										<p>Dispatch address:</p>
+										<p>Address line 1 </p>
+										<p>Address line 2 </p>
+										<p>City/Town Postcode</p>
+							 		</div>
+								</section>
+
+							</article>
+							<article ng-controller="itemCtrl">
+								<ul class="row">
+									<li class="large-2 columns mm_pointCol1"><p>12 / 05 /2013</p></li>
+									<li class="large-2 columns mm_pointCol2"><p>123456789012</p></li>
+									<li class="large-4 columns mm_pointCol3"><p><strong>£2.50 Caffe</strong></p></li>
+									<li class="large-2 columns mm_pointCol4"><p><strong>1,000</strong></p></li>
+									<li class="large-2 columns mm_pointCol5"><a ng-click="seeDetails()">{{togMessage}}</a></li>
+								</ul>
+
+								<section ng-class="{mm_show: open, mm_hide: !open}" id="details" class="row mm_pointHistoryDetails">
+							 		<div class="large-12 columns">
+										<p>Dispatch address:</p>
+										<p>Address line 1 </p>
+										<p>Address line 2 </p>
+										<p>City/Town Postcode</p>
+							 		</div>
+								</section>
+
+							</article>
+							<article ng-controller="itemCtrl">
+								<ul class="row">
+									<li class="large-2 columns mm_pointCol1"><p>12 / 05 /2013</p></li>
+									<li class="large-2 columns mm_pointCol2"><p>1234567</p></li>
+									<li class="large-4 columns mm_pointCol3"><p><strong>£2.50 Caffe</strong></p></li>
+									<li class="large-2 columns mm_pointCol4"><p><strong>1,000</strong></p></li>
+									<li class="large-2 columns mm_pointCol5"><a ng-click="seeDetails()">{{togMessage}}</a></li>
+								</ul>
+
+								<section ng-class="{mm_show: open, mm_hide: !open}" id="details" class="row mm_pointHistoryDetails">
+							 		<div class="large-12 columns">
+										<p>Dispatch address:</p>
+										<p>Address line 1 </p>
+										<p>Address line 2 </p>
+										<p>City/Town Postcode</p>
+							 		</div>
+								</section>
+
+							</article>
+							<div class="row">
+
+						 		<div class="large-12 columns">
+									<div class="mm_pointTableShowMore"><h4>Show more history</h4></div>
+						 		</div>
+							</div>
+						</div>
+					</section><!-- mm_dataArea -->
+					
+					<div class="row">
+						<div class="large-9 columns">
+							<h4>Mail Points collected</h4>
+						</div>
+						
+					</div>
+
+					<section  class="large-12 mm_dataArea mm_historyTable" ng-controller="historyCtrl">
+
+							<div class="row"  ng-click="openPanel()">
+								<div  class="large-12 columns">
+									<h4>Points collected in 2013</h4>
+									<div id="historyToggle" class="mm_pointsCircle open"></div>
+								</div>
+							</div>
+
+						<div id="historyTable">
+
+							<ul class="row mm_pointTableTop">
+								<li class="large-2 columns mm_historyCol1"><p>Date</p></li>
+								<li class="large-2 columns mm_historyCol2"><p>Description</p></li>
+								<li class="large-4 columns mm_historyCol3"><p>Value</p></li>
+								<li class="large-2 columns mm_historyCol4"><p>Unique number</p></li>
+								<li class="large-2 columns mm_historyCol5"><p>Expires</p></li>
+							</ul>
+
+
+							
+							<article class="mm_historyList">
+								<ul class="row">
+									<li class="large-2 columns mm_historyCol1"><p>12 / 05 /2013</p></li>
+									<li class="large-2 columns mm_historyCol2"><p>Unique number entered</p></li>
+									<li class="large-4 columns mm_historyCol3"><p><strong>10</strong></p></li>
+									<li class="large-2 columns mm_historyCol4"><p>11-45-98-33-74-82</p></li>
+									<li class="large-2 columns mm_historyCol5"><p>12/05/2014</p></li>
+								</ul>
+							</article>
+
+							<article class="mm_historyList">
+								<ul class="row">
+									<li class="large-2 columns mm_historyCol1"><p>12 / 05 /2013</p></li>
+									<li class="large-2 columns mm_historyCol2"><p>Unique number entered</p></li>
+									<li class="large-4 columns mm_historyCol3"><p><strong>10</strong></p></li>
+									<li class="large-2 columns mm_historyCol4"><p>11-45-98-33-74-82</p></li>
+									<li class="large-2 columns mm_historyCol5"><p>12/05/2014</p></li>
+								</ul>
+							</article>
+
+							<article class="mm_historyList">
+								<ul class="row">
+									<li class="large-2 columns mm_historyCol1"><p>12 / 05 /2013</p></li>
+									<li class="large-2 columns mm_historyCol2"><p>Unique number entered with promo code</p></li>
+									<li class="large-4 columns mm_historyCol3"><p><strong>10</strong></p></li>
+									<li class="large-2 columns mm_historyCol4"><p>11-45-98-33-74-82</p></li>
+									<li class="large-2 columns mm_historyCol5"><p>12/05/2014</p></li>
+								</ul>
+							</article>
+
+							<article class="mm_historyList">
+								<ul class="row">
+									<li class="large-2 columns mm_historyCol1"><p>12 / 05 /2013</p></li>
+									<li class="large-2 columns mm_historyCol2"><p>Unique number entered with promo code</p></li>
+									<li class="large-4 columns mm_historyCol3"><p><strong>10</strong></p></li>
+									<li class="large-2 columns mm_historyCol4"><p>11-45-98-33-74-82</p></li>
+									<li class="large-2 columns mm_historyCol5"><p>12/05/2014</p></li>
+								</ul>
+							</article>
+
+							<article class="mm_historyList">
+								<ul class="row">
+									<li class="large-2 columns mm_historyCol1"><p>12 / 05 /2013</p></li>
+									<li class="large-2 columns mm_historyCol2"><p>Unique number entered</p></li>
+									<li class="large-4 columns mm_historyCol3"><p><strong>10</strong></p></li>
+									<li class="large-2 columns mm_historyCol4"><p>11-45-98-33-74-82</p></li>
+									<li class="large-2 columns mm_historyCol5"><p>12/05/2014</p></li>
+								</ul>
+							</article>
+							
+
+							<div class= "row">
+
+						 		<div class="large-12 columns">
+									<div class="mm_pointTableShowMore"><h4>Show more history</h4></div>
+						 		</div>
+
+							</div>
+
+						</div>
+
+					</section><!-- mm_dataArea -->
+
+	</div><!-- mm_blueBox-->
+
+	<div class="row">
+		<div class="large-12 columns mm_footerContact">
+			<p>Need help? <a href="#">Contact Us</a></p>
+		</div>
+	</div>
+
+	<div class="mm_footerHelpBar">
+		<div class="row">
+			<div class="large-12 columns">
+				<div class="mm_footerHelpCircle">?</div>
+				<p>My Mail help and FAQ's</p>
+			</div>
+		</div>
+	</div>
+
+<script src="../../javascripts/myMailApp.js"></script>
+
+<script>
+	document.write('<script src=' +
+		('__proto__' in {} ? '../../javascripts/vendor/zepto' : '../../javascripts/vendor/jquery') +
+		'.js><\/script>')
+</script>
+
+<script src="../../javascripts/foundation/foundation.js"></script>
+
+<script src="../../javascripts/foundation/foundation.abide.js"></script>
+
+<script src="../../javascripts/foundation/foundation.alerts.js"></script>
+
+<script src="../../javascripts/foundation/foundation.clearing.js"></script>
+
+<script src="../../javascripts/foundation/foundation.cookie.js"></script>
+
+<script src="../../javascripts/foundation/foundation.dropdown.js"></script>
+
+<script src="../../javascripts/foundation/foundation.forms.js"></script>
+
+<script src="../../javascripts/foundation/foundation.interchange.js"></script>
+
+<script src="../../javascripts/foundation/foundation.joyride.js"></script>
+
+<script src="../../javascripts/foundation/foundation.magellan.js"></script>
+
+<script src="../../javascripts/foundation/foundation.orbit.js"></script>
+
+<script src="../../javascripts/foundation/foundation.placeholder.js"></script>
+
+<script src="../../javascripts/foundation/foundation.reveal.js"></script>
+
+<script src="../../javascripts/foundation/foundation.section.js"></script>
+
+<script src="../../javascripts/foundation/foundation.tooltips.js"></script>
+
+<script src="../../javascripts/foundation/foundation.topbar.js"></script>
+
+
+<script>
+	$(document).foundation();
+</script>
+
+</body>
+</html>

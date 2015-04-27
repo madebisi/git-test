@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width">
+
+	<title>My Mail Rewards</title>
+	
+	<link rel="stylesheet" href="../stylesheets/app.css">
+
+	<!-- Scripts to include Foundation plugin and required javascrip modules -->
+
+	<script src="../javascripts/vendor/custom.modernizr.js"></script>
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+    <script data-require="angular.js@1.0.x" src="http://code.angularjs.org/1.0.7/angular.min.js" data-semver="1.0.7"></script>
+
+	<script src="../javascripts/mymail/custom-form-elements.js.js"></script>
+
+	<script>
+	document.write('<script src=' +
+		('__proto__' in {} ? '../javascripts/vendor/zepto' : '../javascripts/vendor/jquery') +
+		'.js><\/script>')
+	</script>
+	<script src="../javascripts/foundation/foundation.js"></script>
+	<script src="../javascripts/foundation/foundation.abide.js"></script>
+	<script src="../javascripts/foundation/foundation.alerts.js"></script>
+	<script src="../javascripts/foundation/foundation.clearing.js"></script>
+	<script src="../javascripts/foundation/foundation.cookie.js"></script>
+	<script src="../javascripts/foundation/foundation.dropdown.js"></script>
+	<script src="../javascripts/foundation/foundation.forms2.js"></script>
+	<script src="../javascripts/foundation/foundation.interchange.js"></script>
+	<script src="../javascripts/foundation/foundation.joyride.js"></script>
+	<script src="../javascripts/foundation/foundation.magellan111.js"></script>
+	<script src="../javascripts/foundation/foundation.orbit.js"></script>
+	<script src="../javascripts/foundation/foundation.placeholder.js"></script>
+	<script src="../javascripts/foundation/foundation.reveal.js"></script>
+	<script src="../javascripts/foundation/foundation.section.js"></script>
+	<script src="../javascripts/foundation/foundation.tooltips.js"></script>
+	<script src="../javascripts/foundation/foundation.topbar.js"></script>
+
+	<script>$(document).foundation();</script>
+
+	<script src="../javascripts/filter.js"></script>
+
+</head>
+
+<body role="document" ng-app="app">
+	<section class="wrapper" ng-controller="MainCtrl">
+		
+		<header class="header mm_loggedIn" role="banner">
+
+			<div class="row">
+
+				<div class="large-3 columns">
+					<section class="logo">
+						<h1><a href="#" class="site-logo"><img alt="DMG logo" src="../img/logo.png"/></a></h1>
+					</section><!--// Logo -->
+				</div>
+
+				<div class="large-9 columns">
+					<div class="mm_topLogIn">
+						<ul class="inline-list" role="menu">
+							<li><a href="#" role="menuitem">Help &amp; FAQ</a><span class="divide">|</span></li>
+							<li><a href="#" role="menuitem">Log Out</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="large-9 columns">
+					<section class="panel mm_PointsPanel">
+
+						<div class="row">
+							<div class="large-12 columns">
+								<h2>Welcome back, <strong>Steven!</strong></h2>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="large-2 columns">
+								<img src="../img/myMailPoints.png" alt="" />
+							</div>
+
+							<div class="large-5 columns">
+								<div class="mm_pointCounterHolder">
+									<ul>
+										<li class="mm_point" id="mm_digit1">0</li>
+										<li class="mm_point" id="mm_digit2">0</li>
+										<li class="mm_point" id="mm_digit3">0</li>
+										<li class="mm_point" id="mm_digit4">0</li>
+										<li class="mm_point" id="mm_digit5">0</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="large-5 columns">
+								<a class="button secondary" href="#">Enter Unique Number</a>
+							</div>
+						</div>
+
+					</section><!--// Unique Numbers -->
+				</div>
+			</div>
+			
+
+			<section class="mm_navBar">
+				<div class="row">
+					<nav class="top-bar mm_mainNav" role="navigation">
+						<section class="top-bar-section">
+							<ul class="left">
+								<li class="divider"></li>
+
+								<li class="mm_mainNavButton home icon active"><a href="#">Home</a></li>
+
+								<li class="divider"></li>
+
+								<li class="has-dropdown not-click">
+									<a href="#">Browse Rewards</a>
+					                <ul class="dropdown">
+										<li class="title back js-generated"><h5><a href="#">Back</a></h5></li>
+										<li class=""><a href="#">Promotions</a></li>
+										<li class=""><a href="#">Store Vouchers</a></li>
+										<li class=""><a href="#">Days & Nights Out</a></li>
+										<li class=""><a href="#">For the Home</a></li>
+										<li class=""><a href="#">Lifestyle</a></li>
+										<li class=""><a href="#">Travel</a></li>
+					                </ul>
+						        </li>
+
+								<li class="divider"></li>
+
+								<li class="has-dropdown not-click">
+									<a href="#">Fun & Prizes</a>
+					                <ul class="dropdown">
+										<li class="title back js-generated"><h5><a href="#">Back</a></h5></li>
+										<li class=""><a href="#">Lottery</a></li>
+										<li class=""><a href="#">Prize Draw</a></li>
+										<li class=""><a href="#">Competitions</a></li>
+										<li class=""><a href="#">Coffee Break</a></li>
+					                </ul>
+						        </li>
+
+								<li class="divider"></li>
+
+								<li class="has-dropdown not-click">
+									<a href="#">Mail Shopping</a>
+					                <ul class="dropdown">
+										<li class="title back js-generated"><h5><a href="#">Back</a></h5></li>
+										<li class=""><a href="#">Member Deals</a></li>
+										<li class=""><a href="#">Mail Travel</a></li>
+										<li class=""><a href="#">Mail Finance</a></li>
+										<li class=""><a href="#">Mail Books</a></li>
+										<li class=""><a href="#">Mail Gardening</a></li>
+										<li class=""><a href="#">Subscriptions & Clubs</a></li>
+					                </ul>
+						        </li>
+
+								<li class="divider"></li>
+
+								<li class="has-dropdown not-click">
+									<a href="#">Mail Plus</a>
+					                <ul class="dropdown">
+										<li class="title back js-generated"><h5><a href="#">Back</a></h5></li>
+										<li class=""><a href="#">About Mail Plus</a></li>
+										<li class=""><a href="#">Subscribe to Mail Plus</a></li>
+										<li class=""><a href="#">Today's News</a></li>
+										<li class=""><a href="#">Today's Sports</a></li>
+					                </ul>
+						        </li>
+								<li class="divider"></li>
+
+							</ul>
+						</section>
+					</nav>
+				</div>
+			</section><!--// Navigation -->
+
+
+			<div class="row">
+				<div class="large-12 columns">
+					<section class="prod-filter">
+						<form class="custom">
+							<div class="row">
+								<div class="large-3 columns"> <h2 class="small">Days &amp; Nights Out</h2></div>
+								<div class="large-9 columns">
+
+									<fieldset>
+										<div class="row">
+											<div class="large-6 columns">
+												<div class="row">
+													<div class="large-3 columns">
+														<label class="right inline" >Filter</label>
+													</div>
+													<div class="large-9 columns">
+
+														<div class="mm_dropDown">
+															<span id="selectfilter" class="select">All</span>
+															<div class="arrow icon-myMailArrow"></div>
+															<select class="styled">
+																<option>All</option>
+																<option>Dining</option>
+																<option>Cinema</option>
+																<option>Theatre</option>
+																<option>Parks</option>
+															</select>
+														</div>
+
+													</div>
+												</div>
+											</div>
+											<div class="large-6 columns">
+												<div class="row">
+													<div class="large-3 columns">
+														<label class="right inline">Sort</label>
+													</div>
+													<div class="large-9 columns">
+														
+														<div class="mm_dropDown">
+															<span id="selectfilter" class="select">{{filterText}}</span>
+															<div class="arrow icon-myMailArrow"></div>
+															<select class="styled">
+																<option ng-click="reSort('pointsCost','false')">Sort Points (low)</option>
+														        <option ng-click="reSort('pointsCost','true')">Sort Points (high)</option>
+														        <option ng-click="reSort('description','false')">Sort Name (A-Z)</option>
+															</select>
+														</div>
+
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</fieldset>
+								</div>
+							</div>
+						</form>
+					</section><!--// prod-filter -->
+				</div>
+			</div>
+			
+		</header><!--// Header -->
+
+		
+
+		<section class="content" role="main">
+			<section class="sub-catalogue">
+				<div class="row">
+					<div class="large-12 columns">
+						<section class="layout-two">
+							<div class="content" data-section-content>
+								<div class="row">
+									<div class="large-4 columns block-header">
+										<article>
+											<img src="../img/dummy-rewards-r1c1.png" alt=""/>
+											<div class="panel overlay">
+												<h3>Days &amp; Nights Out</h3>
+												<p>Great rewards from dining, cinema, theatre and days out.</p>
+											</div>
+										</article>
+										<div class="row">
+											<div class="large-12 columns">
+												
+											</div>
+										</div>
+									</div>
+									<div class="large-8 columns">
+										<div class="row">
+											<!-- Editors picks -->
+											<section class="holder">
+
+												<div ng-repeat="item in data | orderBy:sortType:order" class="columns" ng-show="$index <= displayNum-1" ng-class="getClass($index, item)">
+													<article >
+														<img src="{{getType($index, item)}}" alt="{{item.title}}" />
+														<div class="panel">
+															<div class="row">
+																<div class="large-10 columns">
+																	<h4>{{item.description}}</h4>
+																</div>	
+																<div class="large-2 columns">
+																	<img src="{{item.logoImage.path}}" class="logo" alt="" />
+																</div>	
+															</div>
+															
+															<footer>
+																<span>Exp / 31/1/14</span> <a href="{{item.highlightImage.href}}" class="medium radius button">More Info</a>
+															</footer>
+														</div>
+													</article>
+												</div>
+
+
+											</section><!--// Editors picks -->
+										</div><!--// row  -->
+										<div>
+											<a ng-click="loadMore()" class="medium button expand transparent">Show More</a>
+										</div>
+									</div>
+								</div><!--// row  -->
+								
+							</div>
+						</section> <!--// Theme: See rewards -->
+						
+					</div>
+				</div>
+
+			</section><!--// Sub-Catalogue -->
+
+		</section><!--// Content-->
+
+		<section class="leaderBoard">
+			<div class="row">
+				<div class="large-10 large-centered column">
+					<div class="panel leader-board"><img src="http://placehold.it/780x90" alt="" /></div>
+				</div>
+			</div>
+		</section><!--// LeaderBoard -->
+
+		<footer class="mm_footer" role="contentinfo">
+			<div class="row">
+				<div class="large-6 columns">
+					<dl>
+						<dt><img src="../img/logo-myMail-dark-small.png" alt=""></dt>
+						<dd>
+							<ul class="inline">
+								<li><a href="">About My Mail</a></li>
+								<li><a href="">Help & FAQs</a></li>
+							</ul>
+						</dd>
+						<dd>
+							<ul class="inline">
+								<li><a href="">Contact Us</a></li>
+								<li><a href="">Return Policy</a></li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+				<div class="large-3 columns">
+					<dl>
+						<dt>Company</dt>
+						<dd><a href="#">Terms and Conditions</a></dd>
+						<dd><a href="#">Privacy Policy</a></dd>
+						<dd><a href="#">Partnerships</a></dd>
+					</dl>
+				</div>
+				<div class="large-3 columns">
+					<dl class="mm_footerSocialIcon">
+						<dt>Connect with MyMail?</dt>
+						<dd><a href="#"><span class="icon-myMailFacebook"></span></a></dd>
+						<dd><a href="#"><span class="icon-myMailTwitter"></span></a></dd>
+						<dd><a href="#"><span class="icon-myMailMail"></span></a></dd>
+					</dl>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="large-12 columns">
+					<p class="copyright"><small>Copyright © 2013 MyMail is a registered company under The Daily Mail Group</small></p>
+				</div>
+			</div>
+		</footer><!--// Footer -->
+
+	</section><!--// Wrapper  -->
+
+	
+
+</body>
+</html>

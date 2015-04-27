@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+	<!-- <base href="http://localhost/~stephenanderson/prototypes/WebSitePrototype"> -->
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>My Mail Rewards</title>
+	
+	<link rel="stylesheet" href="../stylesheets/app.css">
+	<!-- <link rel="stylesheet" href="../stylesheets/styles.css"> -->
+	<script src="../javascripts/vendor/jquery.js"></script>
+
+	<script src="../javascripts/vendor/custom.modernizr.js"></script>
+
+	<!-- Controllers -->
+	<script src="../javascripts/angular/angular.js"></script>
+	<script src="../javascripts/controllers/homeController.js"></script>
+
+</head>
+<body role="document" class="home" ng-app="dmgApp">
+	<section class="wrapper">
+		
+		<header class="header mm_loggedOut" role="banner">
+			<div class="row">
+				<div class="large-4 columns">
+					<section class="logo"><h1><a href="#" class="site-logo"><img alt="DMG logo" src="../img/logo.png"/></a></h1></section><!--// Logo -->
+				</div>
+				<div class="large-8 columns">
+					<div class="membership" role="menu">
+						<p>Not a member?&nbsp;<a href="#" role="menuitem">Join Now</a>&nbsp;<a href="#" class="medium radius button secondary" role="menuitem">Log In</a></p>
+					</div>
+				</div>
+			</div>
+		</header><!--// Header -->
+
+		<section class="mm_navBar">
+			<div class="row">
+				<nav class="top-bar mm_mainNav" role="navigation">
+					<section class="top-bar-section">
+						<ul class="left">
+							<li class="divider"></li>
+							<li class="mm_mainNavButton home icon active"><a href="#">Home</a></li>
+							<li class="divider"></li>
+							<li class="mm_mainNavButton"><a href="#">See Rewards</a></li>
+							<li class="divider"></li>
+							<li class="mm_mainNavButton"><a href="#">Games</a></li>
+							<li class="divider" ></li>
+						</ul>
+					</section>
+				</nav>
+			</div>
+		</section><!--// Navigation -->
+
+		<section class="content" role="main">
+			
+			<section class="carousel">
+				<div class="row">
+					<div class="large-12 columns slideshow-wrapper">
+						<div class="preloader"></div>
+						<ul data-orbit>
+							<li>
+								<img src="../img/dummy-980x241x1.jpg" alt="" />
+								<div class="orbit-caption">
+									<section>
+										<h4><small>Win a</small><br />Dream<br /> Cottage</h4>
+										<p>description</p>
+										<footer><a href="#" class="button medium secondary">Enter Unique Number</a></footer>
+									</section>
+								</div>
+							</li>
+							<li>
+								<img src="../img/dummy-980x241x2.jpg" alt="" />
+								<div class="orbit-caption">
+									<section>
+										<h4><small>Win a</small><br />Dream<br /> Cottage</h4>
+										<p>Collect 18 out of 21 UN’s to enter for a chance to win our £250,000 dream cottage.</p>
+										<footer><a href="#" class="button medium secondary">Enter Unique Number</a></footer>
+									</section>
+								</div>
+							</li>
+							<li>
+								<img src="../img/dummy-980x241x3.jpg" alt="" />
+								<div class="orbit-caption">
+									<section>
+										<h4><small>Win a</small><br />Dream<br /> Cottage</h4>
+										<p>Collect 18 out of 21 UN’s to enter for a chance to win our £250,000 dream cottage.</p>
+										<footer><a href="#" class="button medium secondary">Enter Unique Number </a></footer>
+									</section>
+								</div>
+							</li>
+							<li>
+								<img src="../img/dummy-980x241x4.jpg" alt="" />
+								<div class="orbit-caption">
+									<section>
+										<h4><small>Win a</small><br />Dream<br /> Cottage</h4>
+										<p>Collect 18 out of 21 UN’s to enter for a chance to win our £250,000 dream cottage.</p>
+										<footer><a href="#" class="button medium secondary">Enter Unique Number </a></footer>
+									</section>
+								</div>
+							</li>
+							<li>
+								<img src="../img/dummy-980x241x5.jpg" alt="" />
+								<div class="orbit-caption">
+									<section>
+										<h4><small>Win a</small><br />Dream<br /> Cottage</h4>
+										<p>Collect 18 out of 21 UN’s to enter for a chance to win our £250,000 dream cottage.</p>
+										<footer><a href="#" class="button medium secondary">Enter Unique Number </a></footer>
+									</section>
+								</div>
+							</li>
+							<li>
+								<img src="../img/dummy-980x241x6.jpg" alt="" />
+								<div class="orbit-caption">
+									<section>
+										<h4><small>Win a</small><br />Dream<br /> Cottage</h4>
+										<p>Collect 18 out of 21 UN’s to enter for a chance to win our £250,000 dream cottage.</p>
+										<footer><a href="#" class="button medium secondary">Enter Unique Number </a></footer>
+									</section>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section><!--// Carousel -->
+
+			<section class="tabs" ng-controller="dmgProductsCtrl">
+				<div class="row">
+					<div class="large-12 columns">
+						<div class="section-container auto" data-section>
+							<section class="active promotions layout-one">
+								<p class="title" data-section-title><a href="#panel1" class="icon-myMailStar" ng-click="swapTabs('promotions')">Promotions<small>Discover Special Offers</small></a></p>
+								<div class="content" data-section-content>
+									<div class="row">
+										<div class="large-4 columns block-header">
+											<article>
+												<img src="../img/dummy-promo-r1c1.jpg" alt=""/>
+												<div class="panel overlay">
+													<h3>Promotions</h3>
+													<p>Special offers on specially selected rewards.</p>
+												</div>
+											</article>
+										</div>
+										<div class="large-8 columns block-editors-p">
+											<article>
+												<img src="{{promotions.highlightImage.path}}" class="" alt="" />
+												<img src="../img/flashC-editors-pick.png" class="flashCorners" alt="" />
+												<div class="panel">
+													<div class="row">
+														<div class="large-10 columns"><h4>{{promotions.title}}</h4></div>
+														<div class="large-2 columns"><img src="{{promotions.logoImage.path}}" class="logo" alt="{{promotions.logoImage.name}}" /></div>
+													</div>
+													<p>{{promotions.headline}}</p>
+													<footer>
+														<span>{{promotions.expiryDate}}</span> <a class="medium radius button">View Details</a>
+													</footer>
+												</div>
+											</article>
+										</div>
+									</div><!--// row  -->
+
+									<div class="row">
+										<div class="large-4 columns block-standard" ng-repeat="promotions in standard">
+											<article>
+
+												<img src="{{promotions.standardImage.path}}" class="" alt="" />
+												<div class="panel">
+													<div class="row">
+														<div class="large-10 columns"><h4>{{promotions.title}}</h4></div>	
+														<div class="large-2 columns"><img src="{{promotions.logoImage.path}}" class="logo" alt="{{promotions.logoImage.name}}" /></div>	
+													</div>
+													<p><strong>{{promotions.subtitle}}</strong> {{promotions.headline}}</p>
+													
+													<footer>
+														<span>{{promotions.expiryDate}}</span> <a class="medium radius button">View Details</a>
+													</footer>
+												</div>
+											</article>
+										</div>
+										
+									</div><!--// row  -->
+									<div class="tab-footer"><a class="medium radius button">View all Promotions</a></div>
+								</div>
+							</section>
+							<section class="little-extras layout-one">
+								<p class="title" data-section-title><a href="#panel2" class="icon-myMailExtras" ng-click="swapTabs('littleExtras')">Little Extras<small>Extra gifts for being a<br />Rewards member</small></a></p>
+								<div class="content" data-section-content>
+									<div class="row">
+										<div class="large-4 columns block-header">
+											<article>
+												<img src="../img/dummy-little-extras-r1c1.png" alt=""/>
+												<div class="panel overlay">
+													<h3>Little Extras</h3>
+													<p>Find surprise and delight with these exclusive benefits for being a member such as 2for1 theatre tickets, half price cinema and more</p>
+												</div>
+											</article>
+										</div>
+										<div class="large-8 columns block-editors-p">
+											<article>
+												<img src="{{littleExtras.highlightImage.path}}" class="" alt="" />
+												<img src="{{littleExtras.highlightImage.path}}" class="flashCorners" alt="" />
+												<div class="panel">
+													<div class="row">
+														<div class="large-10 columns"><h4>{{littleExtras.title}}</h4></div>
+														<div class="large-2 columns"><img src="{{littleExtras.logoImage.path}}" class="logo" alt="" /></div>
+													</div>
+													<p><strong>{{littleExtras.title}}</strong>{{littleExtras.subtitle}}</p>
+													<footer><a class="medium radius button">View Details</a></footer>
+												</div>
+											</article>
+										</div>
+									</div><!--// row  -->
+
+									<div class="row">
+										<div class="large-4 columns block-standard" ng-repeat="littleExtras in standard">
+											<article>
+												<img src="{{littleExtras.standardImage.path}" class="" alt="" />
+												<div class="panel">
+													<div class="row">
+														<div class="large-10 columns"><h4>{{littleExtras.title}}</h4></div>
+														<div class="large-2 columns"><img src="{{littleExtras.logoImage.path}}" class="logo" alt="" /></div>
+													</div>
+													<p>{{promotions.headline}}</p>
+													
+													<footer>
+														<a class="medium radius button">View Details</a>
+													</footer>
+												</div>
+											</article>
+										</div>
+										
+									</div><!--// row  -->
+									<div class="tab-footer"><a class="medium radius button">View more rewards</a></div>
+								</div>
+							</section>
+							<section class="see-rewards layout-two">
+								<p class="title" data-section-title><a href="#panel3" class="icon-myMailRewards" ng-click="swapTabs('Rewards')">See Rewards<small>Find the right Reward for you</small></a></p>
+								<div class="content" data-section-content>
+									<div class="row">
+										<div class="large-4 columns block-header">
+											<article>
+												<img src="../img/dummy-rewards-r1c1.png" alt=""/>
+												<div class="panel overlay">
+													<h3> Rewards</h3>
+													<p>Redeem rewards you want from days out and holidays, shopping vouchers, gifts, or even spa experiences and theatre nights.</p>
+												</div>
+											</article>
+										</div>
+										<div class="large-8 columns">
+											<div class="row">
+												<div class="large-6 columns block-standard-small">
+													<article>
+														<a href="#">
+															<img src="../img/block1x-medium-rewards.jpg" class="" alt="" />
+															<div class="panel">
+																<h4>Promotions</h4>
+																<p>Special offers on specially selected rewards</p>
+															</div>
+														</a>
+													</article>
+												</div>
+												<div class="large-6 columns block-standard-small">
+													<article>
+														<a href="#">
+															<img src="../img/block2x-medium-rewards.jpg" class="" alt="" />
+															<div class="panel">
+																<h4>Store Vouchers</h4>
+																<p>Redeem points for vouchers at Marks & Spencer, Tesco, John Lewis, Waitrose and many more</p>
+															</div>
+														</a>
+													</article>
+												</div>
+												<div class="large-6 columns block-standard-small">
+													<article>
+														<a href="#">
+															<img src="../img/block3x-medium-rewards.jpg" class="" alt="" />
+															<div class="panel">
+																<h4>For the Home</h4>
+																<p>Home furnishings, garden and outdoor living, home entertainment</p>
+															</div>
+														</a>
+													</article>
+												</div>
+												<div class="large-6 columns block-standard-small">
+													<article>
+														<a href="#">
+															<img src="../img/block4x-medium-rewards.jpg" class="" alt="" />
+															<div class="panel">
+																<h4>Days & Nights Out</h4>
+																<p>Great rewards from dining, cinema, theatre and days out</p>
+															</div>
+														</a>
+													</article>
+												</div>
+												<div class="large-6 columns block-standard-small">
+													<article>
+														<a href="#">
+															<img src="../img/block5x-medium-rewards.jpg" class="" alt="" />
+															<div class="panel">
+																<h4>Lifestyle</h4>
+																<p>Great rewards on Beauty, Health and Fashion</p>
+															</div>
+														</a>
+													</article>
+												</div>
+												<div class="large-6 columns block-standard-small">
+													<article>
+														<a href="#">
+															<img src="../img/block6x-medium-rewards.jpg" class="" alt="" />
+															<div class="panel">
+																<h4>Travel</h4>
+																<p>Treat yourself or a loved one to a holiday</p>
+															</div>
+														</a>
+													</article>
+												</div>
+											</div><!--// row  -->
+										</div>
+									</div><!--// row  -->
+									<div class="tab-footer"><a class="medium radius button">View rewards</a></div>
+								</div>
+							</section>
+						</div>
+						<!-- ADS -->
+						<div class="panel sky-scrapper left"><img src="http://placehold.it/115x600" alt="" /></div>
+						<div class="panel sky-scrapper right"><img src="http://placehold.it/115x600" alt="" /></div>
+						<!--// ADS -->
+					</div>
+				</div>
+			</section><!--// Tabs -->
+
+		</section><!--// Content -->
+
+		<section class="leaderBoard">
+			<div class="row">
+				<div class="large-10 large-centered column">
+					<div class="panel leader-board">
+						<!-- <img alt="" src="http://placehold.it/780x90"> -->
+						<img src="../img/advert-horz-728x90.jpg" alt="" />
+					</div>
+				</div>
+			</div>
+		</section><!--// LeaderBoard -->
+
+		<footer class="mm_footer" role="contentinfo">
+			<div class="row">
+				<div class="large-6 columns">
+					<dl>
+						<dt><img src="../img/logo-myMail-dark-small.png" alt=""></dt>
+						<dd>
+							<ul class="inline">
+								<li><a href="">About My Mail</a></li>
+								<li><a href="">Help & FAQs</a></li>
+							</ul>
+						</dd>
+						<dd>
+							<ul class="inline">
+								<li><a href="">Contact Us</a></li>
+								<li><a href="">Return Policy</a></li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+				<div class="large-3 columns">
+					<dl>
+						<dt>Company</dt>
+						<dd><a href="#">Terms and Conditions</a></dd>
+						<dd><a href="#">Privacy Policy</a></dd>
+						<dd><a href="#">Partnerships</a></dd>
+					</dl>
+				</div>
+				<div class="large-3 columns">
+					<dl class="mm_footerSocialIcon">
+						<dt>Connect with MyMail?</dt>
+						<dd><a href="#"><span class="icon-myMailFacebook"></span></a></dd>
+						<dd><a href="#"><span class="icon-myMailTwitter"></span></a></dd>
+						<dd><a href="#"><span class="icon-myMailMail"></span></a></dd>
+					</dl>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="large-12 columns">
+					<p class="copyright"><small>Copyright © 2013 MyMail is a registered company under The Daily Mail Group</small></p>
+				</div>
+			</div>
+		</footer><!--// Footer -->
+
+	</section><!--// Wrapper  -->
+
+	<!-- Scripts to include Foundation plugin and required javascrip modules -->
+	
+	
+	<script src="../javascripts/angular-resource.js"></script>	
+	
+	<script src="../javascripts/foundation/foundation.js"></script>
+	<script src="../javascripts/foundation/foundation.abide.js"></script>
+	<script src="../javascripts/foundation/foundation.alerts.js"></script>
+	<script src="../javascripts/foundation/foundation.clearing.js"></script>
+	<script src="../javascripts/foundation/foundation.cookie.js"></script>
+	<script src="../javascripts/foundation/foundation.dropdown.js"></script>
+	<script src="../javascripts/foundation/foundation.forms.js"></script>
+	<script src="../javascripts/foundation/foundation.interchange.js"></script>
+	<script src="../javascripts/foundation/foundation.joyride.js"></script>
+	<script src="../javascripts/foundation/foundation.magellan.js"></script>
+	<script src="../javascripts/foundation/foundation.orbit.js"></script>
+	<script src="../javascripts/foundation/foundation.placeholder.js"></script>
+	<script src="../javascripts/foundation/foundation.reveal.js"></script>
+	<script src="../javascripts/foundation/foundation.section.js"></script>
+	<script src="../javascripts/foundation/foundation.tooltips.js"></script>
+	<script src="../javascripts/foundation/foundation.topbar.js"></script>
+	<script>
+	$(document).foundation();
+
+	$(document).foundation('orbit', {
+		animation: 'fade',
+		timer_speed: 10000,
+		pause_on_hover: true,
+		resume_on_mouseout: false,
+		animation_speed: 500,
+		stack_on_small: true,
+		navigation_arrows: true,
+		slide_number: false,
+		bullets: true,
+		timer: true,
+		next_on_click: false,
+		variable_height: false
+	});
+
+	</script>
+</body>
+</html>

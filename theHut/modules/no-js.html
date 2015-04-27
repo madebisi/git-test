@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<!--[if IE 8]>
+	<html class="no-js lt-ie9" lang="en" > <![endif]-->
+	<!--[if gt IE 8]><!--> 
+	<html class="no-js" lang="en">
+	<!--<![endif]-->
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Splash Page</title>
+
+		<link rel="stylesheet" href="../stylesheets/app.css">
+
+		<script src="../javascripts/vendor/custom.modernizr.js"></script>
+
+		<style>	
+	
+		.panel.error{
+
+			margin:0 auto;
+
+			background-color: red; /* Fallback Color */
+			background-image: -webkit-gradient(linear, left top, left bottom, from(red), to(orange)); /* Saf4+, Chrome */
+			background-image: -webkit-linear-gradient(top, red, orange); /* Chrome 10+, Saf5.1+, iOS 5+ */
+			background-image:    -moz-linear-gradient(top, red, orange); /* FF3.6 */
+			background-image:     -ms-linear-gradient(top, red, orange); /* IE10 */
+			background-image:      -o-linear-gradient(top, red, orange); /* Opera 11.10+ */
+			background-image:         linear-gradient(top, red, orange);
+			filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='red', EndColorStr='orange');
+		}
+
+		.js .panel.error{
+			display:none;
+		}
+		</style>
+
+	</head>
+	<body>
+		
+		<section class="content">
+			<div class="row">
+				<div class="large-8 columns large-centered">
+				<div class="panel error" style="float:left;padding:20px;">
+					<img style="float:left;padding-right:20px;" src="../images/hazard-error.gif" alt="hazard" />
+					<h1>Javascript is disabled in your browser</h1>
+					<p>
+						In order to view this web site you will require javascript<br />
+						Please visit http://how-to-turn-on-javascript.html where you will find how to enable javascript and continue to view our website
+
+					</p>
+				</div>
+				</div>
+			</div>
+		</section><!--// CONTENT -->
+
+		<script src="../javascripts/vendor/jquery.js"></script>
+		<script src="../javascripts/foundation/foundation.js"></script>
+		<script src="../javascripts/foundation/foundation.topbar.js"></script>
+		<script src="../javascripts/foundation/foundation.magellan.js"></script>
+		<script src="../javascripts/foundation/foundation.dropdown.js"></script>
+		<script src="../javascripts/foundation/foundation.forms.js"></script>
+		<script src="../javascripts/foundation/foundation.section.js"></script>
+		<script src="../javascripts/foundation/foundation.topbar.js"></script>
+
+		<script>
+		$(document).foundation();
+		</script>
+	</body>
+	</html>
+

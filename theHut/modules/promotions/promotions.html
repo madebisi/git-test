@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+	<!-- <base href="http://localhost/~stephenanderson/prototypes/WebSitePrototype"> -->
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Promotions</title>
+	
+	<link rel="stylesheet" href="../../stylesheets/app.css">
+	<!-- <link rel="stylesheet" href="../stylesheets/styles.css"> -->
+	<script src="../../javascripts/vendor/jquery.js"></script>
+
+	<script src="../../javascripts/vendor/custom.modernizr.js"></script>
+
+	<!-- Controllers -->
+	<script src="../../javascripts/angular/angular.js"></script>
+	<script src="../../javascripts/controllers/homeController.js"></script>
+
+</head>
+<body class="homepage" ng-app="dmgApp">
+	<section class="wrapper">
+
+		<section class="content" role="main">
+
+			
+			<section class="tabs" ng-controller="dmgProductsCtrl">
+				<div class="row">
+					<div class="large-12 columns">
+						<div class="section-container auto" data-section>
+							<section class="active promotions layout-one">
+								<p class="title" data-section-title><a href="#panel1" class="icon-myMailStar" ng-click="swapTabs('editorsPick')">Promotions<small>Discover Special Offers</small></a></p>
+								<div class="content" data-section-content>
+									<div class="row">
+										<div class="large-4 columns block-header">
+											<article>
+												<img src="../../img/dummy-promo-r1c1.jpg" alt=""/>
+												<div class="panel overlay">
+													<h3>Promotions</h3>
+													<p>Special offers on specially selected rewards.</p>
+												</div>
+											</article>
+										</div>
+										<div class="large-8 columns block-editors-p {{display}}" >
+											<article>
+												<img ng-src="{{products.promotions.highlightImage.path}}" class="" alt="{{products.promotions.highlightImage.name}}" ng-cloak/>
+												<img src="../../img/flashC-editors-pick.png" class="flashCorners" alt="" />
+												<div class="panel">
+													<div class="row">
+														<div class="large-10 columns"><h4>{{products.promotions.title}}</h4></div>
+														<div class="large-2 columns"><img ng-src="{{products.promotions.logoImage.path}}" class="logo" alt="{{products.promotions.logoImage.name}}" ng-cloak /></div>
+													</div>
+													<p>{{products.promotions.headline}}</p>
+													<footer>
+														<span>Exp:&nbsp;{{products.promotions.expiryDate}}</span> <a class="medium radius button">View Details</a>
+													</footer>
+												</div>
+											</article>
+										</div>
+									</div><!--// row  -->
+
+									<div class="row">
+										<div class="large-4 columns block-standard" ng-repeat="promotions in standard.promotions">
+											<article>
+
+												<img ng-src="{{promotions.standardImage.path}}" class="" alt="{{promotions.standardImage.path}}" ng-cloak />
+												<div class="panel">
+													<div class="row">
+														<div class="large-10 columns"><h4>{{promotions.title}}</h4></div>	
+														<div class="large-2 columns"><img ng-src="{{promotions.logoImage.path}}" class="logo" alt="{{promotions.logoImage.name}}" ng-cloak /></div>	
+													</div>
+													<p><strong>{{promotions.subtitle}}</strong> {{promotions.headline}}</p>
+													
+													<footer>
+														<span>Exp:&nbsp;{{promotions.expiryDate}}</span> <a class="medium radius button">View Details</a>
+													</footer>
+												</div>
+											</article>
+										</div>
+										
+									</div><!--// row  -->
+									<div class="tab-footer"><a class="medium radius button">View all Promotions</a></div>
+								</div>
+							</section>
+							<section class="little-extras layout-one">
+								<p class="title" data-section-title><a href="#panel2" class="icon-myMailExtras" ng-click="swapTabs('littleExtras')">Little Extras<small>Extra gifts for being a<br />Rewards member</small></a></p>
+								<div class="content" data-section-content>
+									<div class="row">
+										<div class="large-4 columns block-header">
+											<article>
+												<img src="../../img/dummy-little-extras-r1c1.png" alt=""/>
+												<div class="panel overlay">
+													<h3>Little Extras</h3>
+													<p>Find surprise and delight with these exclusive benefits for being a member such as 2for1 theatre tickets, half price cinema and more</p>
+												</div>
+											</article>
+										</div>
+										<div class="large-8 columns block-editors-p">
+											<article>
+												<img src="{{products.littleExtras.highlightImage.path}}" class="" alt="{{products.littleExtras.highlightImage.name}}" ng-cloak />
+												<img src="../../img/flashC-editors-pick.png" class="flashCorners" alt="" />
+												<div class="panel">
+													<div class="row">
+														<div class="large-10 columns"><h4>{{products.littleExtras.title}}</h4></div>
+														<div class="large-2 columns"><img ng-src="{{products.littleExtras.logoImage.path}}" class="logo" alt="{{products.littleExtras.logoImage.path}}" ng-cloak /></div>
+													</div>
+													<p><strong>{{products.littleExtras.headline}}</strong>{{products.littleExtras.subtitle}}</p>
+													<footer><a class="medium radius button">View Details</a></footer>
+												</div>
+											</article>
+										</div>
+									</div><!--// row  -->
+
+									<div class="row">
+										<div class="large-4 columns block-standard" ng-repeat="extras in standard.littleExtras">
+											<article>
+												<img src="{{extras.standardImage.path}}" class="" alt="" />
+												<div class="panel">
+													<div class="row">
+														<div class="large-10 columns"><h4>{{extras.title}}</h4></div>
+														<div class="large-2 columns"><img ng-src="{{extras.logoImage.path}}" class="logo" alt="" ng-cloak /></div>
+													</div>
+													<p>{{extras.headline}}</p>
+													
+													<footer>
+														<a class="medium radius button">View Details</a>
+													</footer>
+												</div>
+											</article>
+										</div>
+										
+									</div><!--// row  -->
+									<div class="tab-footer"><a class="medium radius button">View more rewards</a></div>
+								</div>
+							</section>
+							<section class="see-rewards layout-two">
+								<p class="title" data-section-title><a href="#panel3" class="icon-myMailRewards" ng-click="swapTabs('rewards')">See Rewards<small>Find the right Reward for you</small></a></p>
+								<div class="content" data-section-content>
+									<div class="row">
+										<div class="large-4 columns block-header">
+											<article>
+												<img src="../../img/dummy-rewards-r1c1.png" alt=""/>
+												<div class="panel overlay">
+													<h3> Rewards</h3>
+													<p>Redeem rewards you want from days out and holidays, shopping vouchers, gifts, or even spa experiences and theatre nights.</p>
+												</div>
+											</article>
+										</div>
+										<div class="large-8 columns">
+											<div class="row">
+												<div class="large-6 columns block-standard-small" ng-repeat="rewards in standard.rewards">
+													<article>
+														<a href="#">
+															<img src="{{rewards.standardImage.path}}" class="" alt="{{rewards.standardImage.name}}" />
+															<div class="panel">
+																<h4>{{rewards.title}}</h4>
+																<p>{{rewards.headline}}</p>
+															</div>
+														</a>
+													</article>
+												</div>
+											</div><!--// row  -->
+										</div>
+									</div><!--// row  -->
+									<div class="tab-footer"><a class="medium radius button">View rewards</a></div>
+								</div>
+							</section>
+						</div>
+						<!-- ADS -->
+						<div class="panel sky-scrapper left"><img src="http://placehold.it/115x600" alt="" /></div>
+						<div class="panel sky-scrapper right"><img src="http://placehold.it/115x600" alt="" /></div>
+						<!--// ADS -->
+					</div>
+				</div>
+			</section><!--// Tabs -->
+
+		</section><!--// Content -->
+
+	</section><!--// Wrapper  -->
+
+	<!-- Scripts to include Foundation plugin and required javascrip modules -->
+	<script src="../../javascripts/foundation/foundation.js"></script>
+	<script src="../../javascripts/foundation/foundation.abide.js"></script>
+	<script src="../../javascripts/foundation/foundation.alerts.js"></script>
+	<script src="../../javascripts/foundation/foundation.clearing.js"></script>
+	<script src="../../javascripts/foundation/foundation.cookie.js"></script>
+	<script src="../../javascripts/foundation/foundation.dropdown.js"></script>
+	<script src="../../javascripts/foundation/foundation.forms.js"></script>
+	<script src="../../javascripts/foundation/foundation.interchange.js"></script>
+	<script src="../../javascripts/foundation/foundation.joyride.js"></script>
+	<script src="../../javascripts/foundation/foundation.magellan.js"></script>
+	<script src="../../javascripts/foundation/foundation.orbit.js"></script>
+	<script src="../../javascripts/foundation/foundation.placeholder.js"></script>
+	<script src="../../javascripts/foundation/foundation.reveal.js"></script>
+	<script src="../../javascripts/foundation/foundation.section.js"></script>
+	<script src="../../javascripts/foundation/foundation.tooltips.js"></script>
+	<script src="../../javascripts/foundation/foundation.topbar.js"></script>
+	<script>
+	$(document).foundation();
+	</script>
+</body>
+</html>
